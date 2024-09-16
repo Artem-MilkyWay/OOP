@@ -8,7 +8,7 @@ public class Main {
     public static void heapSort(int[] arr) {
         int n = arr.length;
 
-        // Шаг 1: Построение кучи (перегруппировка массива)
+        // Шаг 1: Построение кучи
         for (int i = n / 2 - 1; i >= 0; i--) {
             siftDown(arr, n, i);
         }
