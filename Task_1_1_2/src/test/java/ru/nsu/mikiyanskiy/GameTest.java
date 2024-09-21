@@ -34,7 +34,7 @@ public class GameTest {
             // переписываем getFromDeck на время теста, чтобы карты доставались из измененной колоды
             @Override
             public Card getFromDeck() {
-                return testDeck.remove(testDeck.size() - 1); // Получаем последнюю карту
+                return testDeck.remove(testDeck.size() - 1);
             }
         };
 
@@ -46,7 +46,7 @@ public class GameTest {
     }
 
     @Test
-    // проверка проигрыша из-за перебора
+    // проверка проигрыша игрока из-за перебора
     void testPlayerLosesRound() {
         // Настраиваем колоду так, чтобы игрок перебрал
         game.deck = new Deck() {
@@ -60,7 +60,7 @@ public class GameTest {
 
             @Override
             public Card getFromDeck() {
-                return testDeck.remove(testDeck.size()-1); // Возвращаем карты в обратном порядке
+                return testDeck.remove(testDeck.size()-1);
             }
         };
 
@@ -75,6 +75,7 @@ public class GameTest {
         assertTrue(output.contains("You've lost the round."));
     }
 
+    // ничья по блек джеку
     @Test
     void testGameEndsInTie() {
         // Настраиваем колоду так, чтобы была ничья
@@ -88,7 +89,7 @@ public class GameTest {
 
             @Override
             public Card getFromDeck() {
-                return testDeck.remove(testDeck.size()-1); // Возвращаем карты в обратном порядке
+                return testDeck.remove(testDeck.size()-1);
             }
         };
 
@@ -103,7 +104,69 @@ public class GameTest {
         assertTrue(output.contains("It's a tie."));
     }
 
+    // дилер проигрывает по перебору
+    @Test
+    void testDealerLosesRound() {
 
+        // Настраиваем колоду
+        game.deck = new Deck() {
+            public List<Card> testDeck = new ArrayList<>(Arrays.asList(
+                    new Card(Card.Suit.SPADES, Card.Rank.EIGHT),
+                    new Card(Card.Suit.SPADES, Card.Rank.SIX),
+                    new Card(Card.Suit.SPADES, Card.Rank.TEN),
+                    new Card(Card.Suit.HEARTS, Card.Rank.EIGHT),
+                    new Card(Card.Suit.CLUBS, Card.Rank.TEN)
+            ));
+
+            @Override
+            public Card getFromDeck() {
+                return testDeck.remove(testDeck.size()-1);
+            }
+        };
+
+        // Игрок отказывается брать еще карты
+        System.setIn(new ByteArrayInputStream("0\n".getBytes()));
+
+        // Запускаем игру
+        game.start(0);
+
+        // Проверяем вывод на наличие сообщения о выигрыше
+        String output = outputStream.toString();
+        assertTrue(output.contains("You have won the round!"));
+    }
+
+
+    // игрок выигрывает по очкам в конце раунда ( обычный случай )
+    @Test
+    void playerWinByScoreDefault() {
+
+        // Настраиваем колоду
+        game.deck = new Deck() {
+            public List<Card> testDeck = new ArrayList<>(Arrays.asList(
+                    new Card(Card.Suit.HEARTS, Card.Rank.THREE),
+                    new Card(Card.Suit.SPADES, Card.Rank.THREE),
+                    new Card(Card.Suit.SPADES, Card.Rank.SIX),
+                    new Card(Card.Suit.SPADES, Card.Rank.TEN),
+                    new Card(Card.Suit.HEARTS, Card.Rank.EIGHT),
+                    new Card(Card.Suit.CLUBS, Card.Rank.TEN)
+            ));
+
+            @Override
+            public Card getFromDeck() {
+                return testDeck.remove(testDeck.size()-1);
+            }
+        };
+
+        // игрок берет одну карту, диллер берет одну карту
+        System.setIn(new ByteArrayInputStream("1\n0\n".getBytes()));
+
+        // Запускаем игру
+        game.start(0);
+
+        // проверяем наличие вывода о выигрыше
+        String output = outputStream.toString();
+        assertTrue(output.contains("You have won the round!"));
+    }
     // Восстанавливаем стандартный вывод после тестов
     @BeforeEach
     void getBack() {
