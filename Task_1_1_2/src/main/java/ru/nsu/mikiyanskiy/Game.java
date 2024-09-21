@@ -12,7 +12,7 @@ public class Game{
         dealer = new Dealer();
     }
 
-    public void start() {
+    public void start(int numOfRoundsFlag ) { //Для тестов флаг устанавливается 0, тогда играется 1 раунд
         int round = 1;
         int playerWins = 0;
         int dealerWins = 0;
@@ -42,14 +42,17 @@ public class Game{
                 dealerWins++;
                 playerWins++;
                 System.out.println("It's a tie. Score " + playerWins + ":" + dealerWins);
+                if (numOfRoundsFlag==0) break;
                 continue;
             } else if (player.hasBlackjack()) {
                 playerWins++;
                 System.out.println("You have Blackjack! You have won the round. Score " + playerWins + ":" + dealerWins);
+                if (numOfRoundsFlag==0) break;
                 continue;
             } else if (dealer.hasBlackjack()) {
                 dealerWins++;
                 System.out.println("Dealer has Blackjack! Dealer has won the round. Score " + playerWins + ":" + dealerWins);
+                if (numOfRoundsFlag==0) break;
                 continue;
             }
 
@@ -77,7 +80,8 @@ public class Game{
                     break;
                 }
             }
-            if (flag == 1) { // если игрок проиграл из-за перебора, переходим в следующий раунд
+            if (flag == 1) {
+                if (numOfRoundsFlag==0) break;// если игрок проиграл из-за перебора, переходим в следующий раунд
                 continue;
             }
 
@@ -101,16 +105,20 @@ public class Game{
             if (dealer.isLoser()) {
                 playerWins++;
                 System.out.println("You have won the round! Score " + playerWins + ":" + dealerWins );
+                if (numOfRoundsFlag==0) break;
             } else if (player.getScore() > dealer.getScore()) {
                 playerWins++;
                 System.out.println("You have won the round! Score " + playerWins + ":" + dealerWins );
+                if (numOfRoundsFlag==0) break;
             } else if (player.getScore() < dealer.getScore()) {
                 dealerWins++;
                 System.out.println("Dealer has won the round. Score " + playerWins + ":" + dealerWins);
+                if (numOfRoundsFlag==0) break;
             } else {
                 playerWins++;
                 dealerWins++;
                 System.out.println("It's a tie. Score " + playerWins + ":" + dealerWins);
+                if (numOfRoundsFlag==0) break;
             }
         }
     }

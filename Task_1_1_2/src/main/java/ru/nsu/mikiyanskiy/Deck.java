@@ -3,7 +3,7 @@ import java.util.*;
 
 // колода
 public class Deck {
-    private List<Card> cards;
+    public List<Card> cards;
 
     // конструктор колоды карт
     public Deck() {
