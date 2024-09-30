@@ -2,7 +2,7 @@ package ru.nsu.mikiyanskiy;
 import  org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class MainTest {
+class HeapSortTest {
     @Test
     public void testHeapSortWithUnsortedArray() {
         int[] input = {4, 10, 3, 5, 1};
