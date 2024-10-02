@@ -1,7 +1,7 @@
 package ru.nsu.mikiyanskiy;
 import java.util.Scanner;
 
-public class Game{
+public class Game {
     public Deck deck;
     public Player player;
     public Dealer dealer;
