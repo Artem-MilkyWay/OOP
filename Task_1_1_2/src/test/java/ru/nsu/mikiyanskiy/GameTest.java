@@ -90,7 +90,7 @@ public class GameTest {
 
             @Override
             public Card getFromDeck() {
-                return testDeck.remove(testDeck.size()-1);
+                return testDeck.remove(testDeck.size() - 1);
             }
         };
 
@@ -121,7 +121,7 @@ public class GameTest {
 
             @Override
             public Card getFromDeck() {
-                return testDeck.remove(testDeck.size()-1);
+                return testDeck.remove(testDeck.size() - 1);
             }
         };
 
@@ -154,7 +154,7 @@ public class GameTest {
 
             @Override
             public Card getFromDeck() {
-                return testDeck.remove(testDeck.size()-1);
+                return testDeck.remove(testDeck.size() - 1);
             }
         };
 
