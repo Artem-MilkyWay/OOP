@@ -9,19 +9,27 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * тесты для самой игры
+ */
 public class GameTest {
     private Game game;
     private  ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
     private  PrintStream originalOut = System.out;
 
     @BeforeEach
+    /**
+     * настройка перед каждым тестом
+     */
     void setUp() {
         game = new Game(); // Создаем новый экземпляр игры
         System.setOut(new PrintStream(outputStream)); // Перенаправляем вывод в поток
     }
 
     @Test
-    // проверка на победу игрока получением БлекДжека
+    /**
+     * проверка на победу игрока получением БлекДжека
+     */
     void testPlayerWinsWithBlackjack() {
         // Настраиваем колоду так, чтобы игрок получил Блэкджек
         game.deck = new Deck() {
@@ -31,9 +39,11 @@ public class GameTest {
                     new Card(Card.Suit.DIAMONDS, Card.Rank.TEN),
                     new Card(Card.Suit.CLUBS, Card.Rank.ACE)
             ));
-
-            // переписываем getFromDeck на время теста, чтобы карты доставались из измененной колоды
+            
             @Override
+            /**
+             * переписываем getFromDeck на время теста, чтобы карты доставались из измененной колоды
+             */
             public Card getFromDeck() {
                 return testDeck.remove(testDeck.size() - 1);
             }
@@ -47,7 +57,9 @@ public class GameTest {
     }
 
     @Test
-    // проверка проигрыша игрока из-за перебора
+    /**
+     * проверка проигрыша игрока из-за перебора
+     */
     void testPlayerLosesRound() {
         // Настраиваем колоду так, чтобы игрок перебрал
         game.deck = new Deck() {
@@ -60,6 +72,9 @@ public class GameTest {
             ));
 
             @Override
+            /**
+             * переписываем getFromDeck на время теста, чтобы карты доставались из измененной колоды
+             */
             public Card getFromDeck() {
                 return testDeck.remove(testDeck.size()-1);
             }
@@ -76,8 +91,11 @@ public class GameTest {
         assertTrue(output.contains("You've lost the round."));
     }
 
-    // ничья по блек джеку
+    
     @Test
+    /**
+     * ничья по блек джеку
+     */
     void testGameEndsInTie() {
         // Настраиваем колоду так, чтобы была ничья
         game.deck = new Deck() {
@@ -89,6 +107,9 @@ public class GameTest {
             ));
 
             @Override
+            /**
+             * переписываем getFromDeck на время теста, чтобы карты доставались из измененной колоды
+             */
             public Card getFromDeck() {
                 return testDeck.remove(testDeck.size() - 1);
             }
@@ -104,9 +125,11 @@ public class GameTest {
         String output = outputStream.toString();
         assertTrue(output.contains("It's a tie."));
     }
-
-    // дилер проигрывает по перебору
+    
     @Test
+    /**
+     * дилер проигрывает по перебору
+     */
     void testDealerLosesRound() {
 
         // Настраиваем колоду
@@ -120,6 +143,9 @@ public class GameTest {
             ));
 
             @Override
+            /**
+             * переписываем getFromDeck на время теста, чтобы карты доставались из измененной колоды
+             */
             public Card getFromDeck() {
                 return testDeck.remove(testDeck.size() - 1);
             }
@@ -136,9 +162,11 @@ public class GameTest {
         assertTrue(output.contains("You have won the round!"));
     }
 
-
-    // игрок выигрывает по очкам в конце раунда ( обычный случай )
+    
     @Test
+    /**
+     * игрок выигрывает по очкам в конце раунда ( обычный случай )
+     */
     void playerWinByScoreDefault() {
 
         // Настраиваем колоду
@@ -153,6 +181,9 @@ public class GameTest {
             ));
 
             @Override
+            /**
+             * переписываем getFromDeck на время теста, чтобы карты доставались из измененной колоды
+             */
             public Card getFromDeck() {
                 return testDeck.remove(testDeck.size() - 1);
             }
@@ -168,8 +199,11 @@ public class GameTest {
         String output = outputStream.toString();
         assertTrue(output.contains("You have won the round!"));
     }
-    // Восстанавливаем стандартный вывод после тестов
+    
     @BeforeEach
+    /**
+     * Восстанавливаем стандартный вывод после тестов
+     */
     void getBack() {
         System.setOut(originalOut);
     }
