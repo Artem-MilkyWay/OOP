@@ -136,6 +136,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public class <span class="typeNameLabel">Player</span>
 extends java.lang.Object</pre>
+<div class="block">игрок ( вы )</div>
 </li>
 </ul>
 </div>
@@ -208,27 +209,37 @@ extends java.lang.Object</pre>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getScore()">getScore</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">получить количество очков на данный момент</div>
+</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasBlackjack()">hasBlackjack</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">проверка на блекджек</div>
+</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isLoser()">isLoser</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">проверка на проигрыш игрока</div>
+</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#showHand()">showHand</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">вывод текущего положения игрока ( карты на руках, кол-во очков)</div>
+</td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#takeCard(ru.nsu.mikiyanskiy.Card)">takeCard</a></span>&#8203;(<a href="Card.html" title="class in ru.nsu.mikiyanskiy">Card</a>&nbsp;card)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">взять карту игроку</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -308,6 +319,11 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>takeCard</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;takeCard&#8203;(<a href="Card.html" title="class in ru.nsu.mikiyanskiy">Card</a>&nbsp;card)</pre>
+<div class="block">взять карту игроку</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>card</code> - передается карта которая будет добавлена в руки игрока</dd>
+</dl>
 </li>
 </ul>
 <a id="getScore()">
@@ -317,6 +333,11 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>getScore</h4>
 <pre class="methodSignature">public&nbsp;int&nbsp;getScore()</pre>
+<div class="block">получить количество очков на данный момент</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>количество очков</dd>
+</dl>
 </li>
 </ul>
 <a id="showHand()">
@@ -326,6 +347,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>showHand</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;showHand()</pre>
+<div class="block">вывод текущего положения игрока ( карты на руках, кол-во очков)</div>
 </li>
 </ul>
 <a id="isLoser()">
@@ -335,6 +357,11 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>isLoser</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isLoser()</pre>
+<div class="block">проверка на проигрыш игрока</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>1 если если проиграл, иначе 0</dd>
+</dl>
 </li>
 </ul>
 <a id="hasBlackjack()">
@@ -344,6 +371,11 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>hasBlackjack</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;hasBlackjack()</pre>
+<div class="block">проверка на блекджек</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>1 если блекджек</dd>
+</dl>
 </li>
 </ul>
 </li>
