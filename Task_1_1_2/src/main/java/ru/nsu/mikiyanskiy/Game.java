@@ -1,6 +1,9 @@
 package ru.nsu.mikiyanskiy;
 import java.util.Scanner;
 
+/**
+ * основной класс самой игры 
+ */
 public class Game {
     public Deck deck;
     public Player player;
@@ -12,7 +15,11 @@ public class Game {
         dealer = new Dealer();
     }
 
-    public void start(int numOfRoundsFlag ) { //Для тестов флаг устанавливается 0, тогда играется 1 раунд
+    /**
+     * функция запуска игры
+     * @param numOfRoundsFlag Для тестов флаг устанавливается 0, тогда играется 1 раунд
+     */
+    public void start(int numOfRoundsFlag ) { 
         int round = 1;
         int playerWins = 0;
         int dealerWins = 0;
