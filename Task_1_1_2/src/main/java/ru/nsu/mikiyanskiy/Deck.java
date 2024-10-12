@@ -1,7 +1,9 @@
 package ru.nsu.mikiyanskiy;
 import java.util.*;
 
-// колода
+/**
+ *  колода карт
+ */
 public class Deck {
     public List<Card> cards;
 
@@ -16,12 +18,17 @@ public class Deck {
         shuffle();
     }
 
-    // ф-ция перемешивания карт
+    /**
+     * ф-ция перемешивания карт
+     */
     public void shuffle() {
         Collections.shuffle(cards);
     }
 
-    // достать карту из колоды
+    /**
+     * достать карту из колоды
+     * @return самую последнюю карту
+     */
     public Card getFromDeck() {
         return cards.remove(cards.size() - 1);
     }
