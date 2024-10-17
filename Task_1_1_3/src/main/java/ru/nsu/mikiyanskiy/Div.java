@@ -3,14 +3,14 @@ package ru.nsu.mikiyanskiy;
 import java.util.Map;
 
 /**
- * класс деления
+ * класс деления.
  */
 public class Div extends Expression {
     private final Expression left;
     private final Expression right;
 
     /**
-     * конструктор класса деления
+     * конструктор класса деления.
      *
      * @param left - левое выражение
      * @param right - правое выражение
@@ -21,7 +21,7 @@ public class Div extends Expression {
     }
 
     /**
-     * переопределение метода вычисления выражения
+     * переопределение метода вычисления выражения.
      *
      * @param variables - переменные  и их значения
      * @return результат вычисления
@@ -37,7 +37,7 @@ public class Div extends Expression {
     }
 
     /**
-     * переопределение метода вывода выражения
+     * переопределение метода вывода выражения.
      *
      * @return выражение
      */
@@ -48,7 +48,7 @@ public class Div extends Expression {
     }
 
     /**
-     * переопределение метода взятия производной
+     * переопределение метода взятия производной.
      *
      * @param variable - переменная по которой берется производная
      * @return выражение после взятия производной

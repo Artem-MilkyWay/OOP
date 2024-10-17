@@ -6,12 +6,12 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * тесты для класса переменной
+ * тесты для класса переменной.
  */
 public class VariableTest {
 
     /**
-     * тест для вычисления выражения
+     * тест для вычисления выражения.
      */
     @Test
     public void testEval() {
@@ -22,7 +22,7 @@ public class VariableTest {
     }
 
     /**
-     * тест для вывода выражения
+     * тест для вывода выражения.
      */
     @Test
     public void testPrint() {
@@ -31,7 +31,7 @@ public class VariableTest {
     }
 
     /**
-     * тест для взятие производной
+     * тест для взятие производной.
      */
     @Test
     public void testDerivative() {
