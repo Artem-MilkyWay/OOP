@@ -132,6 +132,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public class <span class="typeNameLabel">Div</span>
 extends java.lang.Object</pre>
+<div class="block">класс деления</div>
 </li>
 </ul>
 </div>
@@ -154,7 +155,9 @@ extends java.lang.Object</pre>
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(ru.nsu.mikiyanskiy.Expression,ru.nsu.mikiyanskiy.Expression)">Div</a></span>&#8203;(ru.nsu.mikiyanskiy.Expression&nbsp;left,
    ru.nsu.mikiyanskiy.Expression&nbsp;right)</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">конструктор класса деления</div>
+</td>
 </tr>
 </table>
 </li>
@@ -178,21 +181,21 @@ extends java.lang.Object</pre>
 <td class="colFirst"><code>ru.nsu.mikiyanskiy.Expression</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#derivative(java.lang.String)">derivative</a></span>&#8203;(java.lang.String&nbsp;variable)</code></th>
 <td class="colLast">
-<div class="block">Метод для взятия производной</div>
+<div class="block">переопределение метода взятия производной</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#eval(java.util.Map)">eval</a></span>&#8203;(java.util.Map&lt;java.lang.String,&#8203;java.lang.Integer&gt;&nbsp;variables)</code></th>
 <td class="colLast">
-<div class="block">// Метод для вычисления выражения</div>
+<div class="block">переопределение метода вычисления выражения</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#print()">print</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Метод для печати выражения</div>
+<div class="block">переопределение метода вывода выражения</div>
 </td>
 </tr>
 </table>
@@ -227,6 +230,12 @@ extends java.lang.Object</pre>
 <h4>Div</h4>
 <pre>public&nbsp;Div&#8203;(ru.nsu.mikiyanskiy.Expression&nbsp;left,
            ru.nsu.mikiyanskiy.Expression&nbsp;right)</pre>
+<div class="block">конструктор класса деления</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>left</code> - - левое выражение</dd>
+<dd><code>right</code> - - правое выражение</dd>
+</dl>
 </li>
 </ul>
 </li>
@@ -246,12 +255,12 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>eval</h4>
 <pre class="methodSignature">public&nbsp;int&nbsp;eval&#8203;(java.util.Map&lt;java.lang.String,&#8203;java.lang.Integer&gt;&nbsp;variables)</pre>
-<div class="block">// Метод для вычисления выражения</div>
+<div class="block">переопределение метода вычисления выражения</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>variables</code> - - переменные  и их значения</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>полученное значение</dd>
+<dd>результат вычисления</dd>
 </dl>
 </li>
 </ul>
@@ -262,10 +271,10 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>print</h4>
 <pre class="methodSignature">public&nbsp;java.lang.String&nbsp;print()</pre>
-<div class="block">Метод для печати выражения</div>
+<div class="block">переопределение метода вывода выражения</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>строка - выражение</dd>
+<dd>выражение</dd>
 </dl>
 </li>
 </ul>
@@ -276,7 +285,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>derivative</h4>
 <pre class="methodSignature">public&nbsp;ru.nsu.mikiyanskiy.Expression&nbsp;derivative&#8203;(java.lang.String&nbsp;variable)</pre>
-<div class="block">Метод для взятия производной</div>
+<div class="block">переопределение метода взятия производной</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>variable</code> - - переменная по которой берется производная</dd>
