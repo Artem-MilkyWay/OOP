@@ -1,4 +1,5 @@
 package ru.nsu.mikiyanskiy;
+
 import java.util.Map;
 
 public class Div extends Expression {

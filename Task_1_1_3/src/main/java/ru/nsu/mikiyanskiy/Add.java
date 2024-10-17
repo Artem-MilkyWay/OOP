@@ -1,6 +1,6 @@
 package ru.nsu.mikiyanskiy;
-import java.util.Map;
 
+import java.util.Map;
 
 class Add extends Expression {
     private final Expression left, right;
