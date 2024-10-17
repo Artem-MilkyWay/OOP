@@ -11,7 +11,7 @@ class Sub extends Expression {
 
     @Override
     public String print() {
-        return "(" + left.print() + "-" + right.print() + ")";
+        return "(" + left.print() + " - " + right.print() + ")";
     }
 
     @Override
