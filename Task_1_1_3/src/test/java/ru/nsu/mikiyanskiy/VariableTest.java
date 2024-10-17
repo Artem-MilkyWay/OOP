@@ -5,8 +5,14 @@ import java.util.Map;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * тесты для класса переменной
+ */
 public class VariableTest {
 
+    /**
+     * тест для вычисления выражения
+     */
     @Test
     public void testEval() {
         Expression var = new Variable("x");
@@ -15,12 +21,18 @@ public class VariableTest {
         assertEquals(10, var.eval(variables));
     }
 
+    /**
+     * тест для вывода выражения
+     */
     @Test
     public void testPrint() {
         Expression var = new Variable("x");
         assertEquals("x", var.print());
     }
 
+    /**
+     * тест для взятие производной
+     */
     @Test
     public void testDerivative() {
         Expression var = new Variable("x");
