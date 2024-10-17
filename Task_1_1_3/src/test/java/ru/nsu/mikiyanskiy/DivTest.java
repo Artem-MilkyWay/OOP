@@ -25,4 +25,3 @@ public class DivTest {
         assertEquals("(((1 * 5) - (x * 0)) / (5 * 5))", der.print());
     }
 }
-
