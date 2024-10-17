@@ -6,7 +6,8 @@ import java.util.Map;
  * класс произведения.
  */
 class Mul extends Expression {
-    private final Expression left, right;
+    private final Expression left;
+    private final Expression right;
 
     /**
      * конструктор класса произведения.

@@ -6,7 +6,8 @@ import java.util.Map;
  * класс сложения.
  */
 class Add extends Expression {
-    private final Expression left, right;
+    private final Expression left;
+    private final Expression right;
 
     /**
      * конструктор класса сложения.

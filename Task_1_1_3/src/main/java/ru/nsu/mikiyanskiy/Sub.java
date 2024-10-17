@@ -6,7 +6,8 @@ import java.util.Map;
  * класс вычитания.
  */
 class Sub extends Expression {
-    private final Expression left, right;
+    private final Expression left;
+    private final Expression right;
 
     /**
      * конструктор вычитания.
