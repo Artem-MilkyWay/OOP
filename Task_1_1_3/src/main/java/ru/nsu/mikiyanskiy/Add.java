@@ -5,7 +5,7 @@ import java.util.Map;
 /**
  * класс сложения.
  */
-class Add extends Expression {
+class Add implements Expression {
     private final Expression left;
     private final Expression right;
 
