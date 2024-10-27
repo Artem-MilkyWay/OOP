@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"ru.nsu.mikiyanskiy","l":"AdjacencyListGraph"},{"p":"ru.nsu.mikiyanskiy","l":"AdjacencyMatrixGraph"},{"l":"All Classes","url":"allclasses-index.html"},{"p":"ru.nsu.mikiyanskiy","l":"Graph"},{"p":"ru.nsu.mikiyanskiy","l":"IncidenceMatrixGraph"}]
