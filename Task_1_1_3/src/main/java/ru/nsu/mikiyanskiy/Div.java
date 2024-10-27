@@ -5,7 +5,7 @@ import java.util.Map;
 /**
  * класс деления.
  */
-public class Div extends Expression {
+public class Div implements Expression {
     private final Expression left;
     private final Expression right;
 
