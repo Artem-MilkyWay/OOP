@@ -5,7 +5,7 @@ import java.util.Map;
 /**
  * класс вычитания.
  */
-class Sub extends Expression {
+class Sub implements Expression {
     private final Expression left;
     private final Expression right;
 
