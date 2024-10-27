@@ -5,7 +5,7 @@ import java.util.Map;
 /**
  * класс переменной.
  */
-class Variable extends Expression {
+class Variable implements Expression {
     private final String name;
 
     /**
