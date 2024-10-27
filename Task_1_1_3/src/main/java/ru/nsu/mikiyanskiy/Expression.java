@@ -3,15 +3,15 @@ package ru.nsu.mikiyanskiy;
 import java.util.Map;
 
 /**
- * класс самого выражения.
+ * Интерфейс для выражения.
  */
-abstract class Expression {
+public interface Expression {
     /**
      * Метод для печати выражения.
      *
      * @return строка - выражение
      */
-    public abstract String print();
+    String print();
 
     /**
      * Метод для взятия производной.
@@ -19,13 +19,13 @@ abstract class Expression {
      * @param variable - переменная по которой берется производная
      * @return выражение после взятия производной
      */
-    public abstract Expression derivative(String variable);
+    Expression derivative(String variable);
 
     /**
-     * // Метод для вычисления выражения.
+     * Метод для вычисления выражения.
      *
-     * @param variables - переменные  и их значения
+     * @param variables - переменные и их значения
      * @return полученное значение
      */
-    public abstract int eval(Map<String, Integer> variables);
+    int eval(Map<String, Integer> variables);
 }
