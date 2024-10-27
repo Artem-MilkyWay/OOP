@@ -5,7 +5,7 @@ import java.util.Map;
 /**
  * класс произведения.
  */
-class Mul extends Expression {
+class Mul implements Expression {
     private final Expression left;
     private final Expression right;
 
