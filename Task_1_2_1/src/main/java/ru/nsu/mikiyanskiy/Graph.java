@@ -51,4 +51,3 @@ public interface Graph {
         return true; // графы равны
     }
 }
-

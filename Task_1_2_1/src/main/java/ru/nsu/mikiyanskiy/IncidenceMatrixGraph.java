@@ -6,126 +6,108 @@ import java.io.IOException;
 import java.util.*;
 
 /**
- * граф в виде матрицы инцендентности
+ * Граф в виде матрицы инцидентности.
  */
 public class IncidenceMatrixGraph implements Graph {
-    private int[][] incidenceMatrix; // Матрица инцидентности
-    private int vertexCount;         // Количество вершин
-    public int edgeCount;           // Количество рёбер
+    private List<int[]> incidenceMatrix; // Список рёбер как массивов инцидентности
+    private int verticesCount;
 
     public IncidenceMatrixGraph() {
-        incidenceMatrix = new int[0][0];
-        vertexCount = 0;
-        edgeCount = 0;
+        incidenceMatrix = new ArrayList<>();
+        verticesCount = 0;
     }
 
     @Override
     public void addVertex(int vertex) {
-        if (vertex >= vertexCount) {
-            // Увеличиваем количество вершин и расширяем матрицу
-            vertexCount = vertex + 1;
-            int[][] newMatrix = new int[vertexCount][edgeCount];
-            for (int i = 0; i < incidenceMatrix.length; i++) {
-                newMatrix[i] = Arrays.copyOf(incidenceMatrix[i], edgeCount);
-            }
-            incidenceMatrix = newMatrix;
+        if (vertex >= verticesCount) {
+            verticesCount = vertex + 1;
         }
     }
 
     @Override
     public void removeVertex(int vertex) {
-        if (vertex < 0 || vertex >= vertexCount) {
-            throw new IllegalArgumentException("Vertex does not exist");
+        if (vertex >= verticesCount) {
+            return;
         }
-        // Удаляем вершину, сдвигаем все последующие вершины на место удалённой
-        for (int i = vertex; i < vertexCount - 1; i++) {
-            incidenceMatrix[i] = incidenceMatrix[i + 1];
-        }
-        vertexCount--;
 
-        // Обрезаем массив до нового количества вершин
-        incidenceMatrix = Arrays.copyOf(incidenceMatrix, vertexCount);
+        // Удаление всех рёбер, инцидентных этой вершине
+        incidenceMatrix.removeIf(edge -> edge[vertex] != 0);
+
+        // Обновляем количество вершин, если это была последняя вершина
+        if (vertex == verticesCount - 1) {
+            verticesCount--;
+        }
     }
 
     @Override
     public void addEdge(int fromVertex, int toVertex) {
-        if (fromVertex >= vertexCount || toVertex >= vertexCount) {
-            throw new IllegalArgumentException("Vertex does not exist");
-        }
+        addVertex(fromVertex); // Убедимся, что вершины существуют
+        addVertex(toVertex);
 
-        // Увеличиваем количество рёбер и расширяем матрицу
-        edgeCount++;
-        for (int i = 0; i < vertexCount; i++) {
-            incidenceMatrix[i] = Arrays.copyOf(incidenceMatrix[i], edgeCount);
-        }
+        // Создаём новый массив инцидентности для ребра
+        int[] edge = new int[verticesCount];
+        edge[fromVertex] = -1; // Из вершины fromVertex
+        edge[toVertex] = 1;    // В вершину toVertex
 
-        // Обозначаем ребро в матрице
-        incidenceMatrix[fromVertex][edgeCount - 1] = 1;  // Исходящее ребро
+        incidenceMatrix.add(edge); // Добавляем новое ребро
     }
 
     @Override
     public void removeEdge(int fromVertex, int toVertex) {
-        // Найдём ребро между fromVertex и toVertex
-        int edgeIndex = -1;
-        for (int i = 0; i < edgeCount; i++) {
-            if (incidenceMatrix[fromVertex][i] == 1 && incidenceMatrix[toVertex][i] == -1) {
-                edgeIndex = i;
-                break;
-            }
-        }
-        if (edgeIndex != -1) {
-            // Удаляем ребро, сдвигаем все последующие рёбра на место удалённого
-            for (int i = 0; i < vertexCount; i++) {
-                for (int j = edgeIndex; j < edgeCount - 1; j++) {
-                    incidenceMatrix[i][j] = incidenceMatrix[i][j + 1];
-                }
-                incidenceMatrix[i] = Arrays.copyOf(incidenceMatrix[i], edgeCount - 1);
-            }
-            edgeCount--;
-        }
+        incidenceMatrix.removeIf(edge -> edge[fromVertex] == -1 && edge[toVertex] == 1);
     }
 
     @Override
     public List<Integer> getNeighbors(int vertex) {
         List<Integer> neighbors = new ArrayList<>();
-        for (int i = 0; i < edgeCount; i++) {
-            if (incidenceMatrix[vertex][i] == 1) {
-                neighbors.add(i);// Исходящее ребро
+
+        // Проверяем существование вершины
+        if (vertex < 0 || vertex >= verticesCount) {
+            return neighbors; // Если вершина не существует, возвращаем пустой список
+        }
+
+        // Проходим по каждому ребру в матрице инцидентности
+        for (int[] edge : incidenceMatrix) {
+            // Проверяем длину edge, чтобы избежать выхода за пределы
+            if (edge.length > vertex && edge[vertex] == -1) { // Если вершина является началом ребра
+                for (int i = 0; i < verticesCount; i++) {
+                    // Проверяем длину edge, чтобы избежать выхода за пределы
+                    if (edge.length > i && edge[i] == 1) { // Найти соседнюю вершину
+                        neighbors.add(i); // Добавляем соседнюю вершину в список
+                    }
+                }
             }
         }
-        return neighbors;
+
+        return neighbors; // Возвращаем список соседей
     }
+
+
 
     @Override
     public void readFromFile(String filename) {
         try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
             String line;
 
-            // Чтение количества вершин и рёбер
+            // Чтение количества вершин
             if ((line = br.readLine()) != null) {
-                String[] counts = line.trim().split(" ");
-                if (counts.length != 2) {
-                    throw new IOException("Invalid data format");
+                int vertexCount = Integer.parseInt(line.trim());
+                for (int i = 0; i < vertexCount; i++) {
+                    addVertex(i); // Добавляем вершины 0 до vertexCount - 1
                 }
-                vertexCount = Integer.parseInt(counts[0]);
-                edgeCount = Integer.parseInt(counts[1]);
-                incidenceMatrix = new int[vertexCount][edgeCount];
             }
 
-            // Чтение матрицы инцидентности
-            int row = 0;
-            while ((line = br.readLine()) != null && row < vertexCount) {
-                String[] values = line.trim().split(" ");
-                if (values.length != edgeCount) {
-                    throw new IOException("Invalid data format");
+            // Чтение рёбер
+            while ((line = br.readLine()) != null) {
+                String[] vertices = line.trim().split(" "); // Разделение строки по пробелу
+                if (vertices.length == 2) {
+                    int fromVertex = Integer.parseInt(vertices[0]);
+                    int toVertex = Integer.parseInt(vertices[1]);
+                    addEdge(fromVertex, toVertex); // Добавляем ребро между вершинами
                 }
-                for (int col = 0; col < edgeCount; col++) {
-                    incidenceMatrix[row][col] = Integer.parseInt(values[col]);
-                }
-                row++;
             }
         } catch (IOException e) {
-            System.err.println("Ошибка при чтении файла: " + e.getMessage());
+            e.printStackTrace();
         } catch (NumberFormatException e) {
             System.err.println("Ошибка формата числа: " + e.getMessage());
         }
@@ -134,21 +116,21 @@ public class IncidenceMatrixGraph implements Graph {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < vertexCount; i++) {
-            sb.append("Vertex ").append(i).append(": ");
-            for (int j = 0; j < edgeCount; j++) {
-                sb.append(incidenceMatrix[i][j]).append(" ");
-            }
-            sb.append("n");
+        sb.append("Incidence Matrix:\n");
+
+        for (int[] edge : incidenceMatrix) {
+            sb.append(Arrays.toString(edge)).append("\n");
         }
+
         return sb.toString();
     }
 
     @Override
     public List<Integer> topologicalSort() {
         Stack<Integer> stack = new Stack<>();
-        boolean[] visited = new boolean[vertexCount];
-        for (int i = 0; i < vertexCount; i++) {
+        boolean[] visited = new boolean[verticesCount];
+
+        for (int i = 0; i < verticesCount; i++) {
             if (!visited[i]) {
                 topologicalSortUtil(i, visited, stack);
             }
@@ -161,63 +143,59 @@ public class IncidenceMatrixGraph implements Graph {
         return sortedList;
     }
 
-    /**
-     * вспомогательная ф-ция сортировки.
-     *
-     * @param v - обрабатываемая вершина
-     * @param visited - массив посещенных вершин
-     * @param stack - стек в который помещаем обработанные вершины
-     */
     private void topologicalSortUtil(int v, boolean[] visited, Stack<Integer> stack) {
         visited[v] = true;
-        for (int j = 0; j < edgeCount; j++) {
-            if (incidenceMatrix[v][j] == 1) {
-                for (int i = 0; i < vertexCount; i++) {
-                    if (incidenceMatrix[i][j] == -1 && !visited[i]) {
-                        topologicalSortUtil(i, visited, stack);
-                    }
+
+        for (int[] edge : incidenceMatrix) {
+            int fromVertex = -1;
+            int toVertex = -1;
+
+            // Находим начальную и конечную вершины для текущего ребра
+            for (int i = 0; i < edge.length; i++) {
+                if (edge[i] == -1) {
+                    fromVertex = i;
+                } else if (edge[i] == 1) {
+                    toVertex = i;
                 }
             }
+
+            // Если это текущее ребро инцидентно вершине v и конечная вершина еще не посещена
+            if (fromVertex == v && !visited[toVertex]) {
+                topologicalSortUtil(toVertex, visited, stack);
+            }
         }
+
         stack.push(v);
     }
 
     @Override
     public int getVerticesCount() {
-        return vertexCount;
+        return verticesCount;
     }
 
     @Override
     public boolean[][] getAdjacencyMatrix() {
-        boolean[][] adjacencyMatrix = new boolean[vertexCount][vertexCount];
+        boolean[][] matrix = new boolean[verticesCount][verticesCount];
 
-        // Проходим по всем рёбрам
-        for (int i = 0; i < edgeCount; i++) {
+        for (int[] edge : incidenceMatrix) {
             int fromVertex = -1;
             int toVertex = -1;
 
-            // Ищем вершины, инцидентные этому ребру
-            for (int j = 0; j < vertexCount; j++) {
-                if (incidenceMatrix[j][i] == 1) {
-                    // Первая вершина - откуда идёт ребро
-                    if (fromVertex == -1) {
-                        fromVertex = j;
-                    }
-                    // Вторая вершина - куда идёт ребро
-                    else {
-                        toVertex = j;
-                        break;
-                    }
+            // Поиск начальной и конечной вершин для данного ребра
+            for (int i = 0; i < edge.length; i++) {
+                if (edge[i] == -1) {
+                    fromVertex = i;
+                } else if (edge[i] == 1) {
+                    toVertex = i;
                 }
             }
 
-            // Если нашли обе вершины, помечаем их как смежные
+            // Если ребро валидное, обновляем матрицу смежности
             if (fromVertex != -1 && toVertex != -1) {
-                adjacencyMatrix[fromVertex][toVertex] = true;
-                adjacencyMatrix[toVertex][fromVertex] = true; // Для неориентированного графа
+                matrix[fromVertex][toVertex] = true;
             }
         }
 
-        return adjacencyMatrix;
+        return matrix;
     }
 }
