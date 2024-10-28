@@ -104,7 +104,7 @@ public class AdjacencyMatrixGraph implements Graph {
             // Чтение матрицы смежности
             int row = 0;
             while ((line = br.readLine()) != null && row < vertexCount) {
-                String[] values = line.trim().split("\s+");
+                String[] values = line.trim().split("\\s+");
                 if (values.length == vertexCount) { // Проверка количества значений в строке
                     for (int col = 0; col < vertexCount; col++) {
                         adjacencyMatrix[row][col] = values[col].equals("1");
