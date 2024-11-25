@@ -12,7 +12,7 @@ public class AdjacencyMatrixGraphTest {
 
     @Test
     public void testAddVertex() {
-        Graph graph = new AdjacencyMatrixGraph(5); // Создаем граф с 5 вершинами
+        AdjacencyMatrixGraph graph = new AdjacencyMatrixGraph(5); // Создаем граф с 5 вершинами
         graph.addVertex(5); // Добавляем новую вершину
 
         assertEquals(6, graph.getVerticesCount()); // Проверяем количество вершин

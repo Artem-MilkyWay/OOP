@@ -21,16 +21,19 @@ public class AdjacencyMatrixGraph implements Graph {
 
     @Override
     public void addVertex(int vertex) {
-        // Создаем новую матрицу большего размера
-        boolean[][] newMatrix = new boolean[vertexCount + 1][vertexCount + 1];
+        if (vertex >= vertexCount) { // Проверяем, если вершина выходит за пределы текущего количества
+            // Создаем новую матрицу смежности с увеличенным размером
+            boolean[][] newMatrix = new boolean[vertex + 1][vertex + 1];
 
-        // Копируем старые значения в новую матрицу
-        for (int i = 0; i < vertexCount; i++) {
-            System.arraycopy(adjacencyMatrix[i], 0, newMatrix[i], 0, vertexCount);
+            // Копируем старые значения в новую матрицу
+            for (int i = 0; i < vertexCount; i++) {
+                System.arraycopy(adjacencyMatrix[i], 0, newMatrix[i], 0, vertexCount);
+            }
+
+            // Обновляем ссылку на матрицу
+            adjacencyMatrix = newMatrix;
+            vertexCount = vertex + 1; // Обновляем количество вершин
         }
-
-        adjacencyMatrix = newMatrix; // Обновляем ссылку на матрицу
-        vertexCount++; // Увеличиваем количество вершин
     }
 
     @Override
@@ -176,5 +179,4 @@ public class AdjacencyMatrixGraph implements Graph {
     public boolean[][] getAdjacencyMatrix() {
         return adjacencyMatrix; // Возвращает матрицу смежности
     }
-
 }

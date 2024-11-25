@@ -19,10 +19,18 @@ public class IncidenceMatrixGraph implements Graph {
 
     @Override
     public void addVertex(int vertex) {
-        if (vertex >= verticesCount) {
-            verticesCount = vertex + 1;
+        // Если вершина уже существует, ничего не делаем
+        if (vertex < verticesCount) {
+            return;
+        }
+
+        verticesCount = vertex + 1;
+        for (int[] edge : incidenceMatrix) {
+            int[] newEdge = Arrays.copyOf(edge, verticesCount);
+            edge = newEdge;
         }
     }
+
 
     @Override
     public void removeVertex(int vertex) {
