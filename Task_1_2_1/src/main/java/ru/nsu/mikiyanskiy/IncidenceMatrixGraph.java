@@ -24,7 +24,6 @@ public class IncidenceMatrixGraph implements Graph {
             return;
         }
 
-        // Далее расширяем матрицу как в предыдущем примере
         verticesCount = vertex + 1;
         for (int[] edge : incidenceMatrix) {
             int[] newEdge = Arrays.copyOf(edge, verticesCount);
