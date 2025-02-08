@@ -81,7 +81,7 @@ public class PrimeCheckerParallelThread extends Thread {
         }
 
         // checking that all threads dont have non-prime numbers
-        for (PrimeCheckerParallelThread thread : threads){
+        for (PrimeCheckerParallelThread thread : threads) {
             thread.join();
             if (thread.hasNonPrime) {
                 return true;

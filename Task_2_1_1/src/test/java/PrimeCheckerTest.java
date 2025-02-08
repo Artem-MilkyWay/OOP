@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class PrimeCheckerTest {
 
     private final int [] nonPrimes1 = {1};
-    private final int [] nonPrimes2 = {2,5,4};
+    private final int [] nonPrimes2 = {2, 5, 4};
     private final int [] emptyArray = {};
 
     /**
@@ -45,7 +45,8 @@ public class PrimeCheckerTest {
         for (int numThreads : threadCounts) {
             long startTime = System.currentTimeMillis();
             try {
-                boolean result2 = PrimeCheckerParallelThread.containsNonPrime(largePrimeArray, numThreads);
+                boolean result2 = PrimeCheckerParallelThread.
+                        containsNonPrime(largePrimeArray, numThreads);
                 long endTime = System.currentTimeMillis();
                 System.out.println("Parallel execution with "
                         + numThreads + " " + "threads time: " + (endTime - startTime) + " ms");

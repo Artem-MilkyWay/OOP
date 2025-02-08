@@ -7,6 +7,12 @@ import java.util.Arrays;
  */
 public class PrimeCheckerParallelStream {
 
+    /**
+     * checking if number is prime.
+     *
+     * @param number
+     * @return true if prime
+     */
     public static boolean isPrime(int number) {
         if (number <= 1) {
             return false;
