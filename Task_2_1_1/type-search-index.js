@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"multi.thread","l":"PrimeCheckerParallelStream"},{"p":"multi.thread","l":"PrimeCheckerParallelThread"},{"p":"multi.thread","l":"PrimeCheckerSequential"}];updateSearchResults();
