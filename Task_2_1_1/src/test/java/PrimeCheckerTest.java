@@ -45,8 +45,8 @@ public class PrimeCheckerTest {
         for (int numThreads : threadCounts) {
             long startTime = System.currentTimeMillis();
             try {
-                boolean result2 = PrimeCheckerParallelThread.
-                        containsNonPrime(largePrimeArray, numThreads);
+                boolean result2 = PrimeCheckerParallelThread
+                        .containsNonPrime(largePrimeArray, numThreads);
                 long endTime = System.currentTimeMillis();
                 System.out.println("Parallel execution with "
                         + numThreads + " " + "threads time: " + (endTime - startTime) + " ms");

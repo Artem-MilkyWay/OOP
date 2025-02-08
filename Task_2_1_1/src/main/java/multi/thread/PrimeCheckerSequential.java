@@ -29,8 +29,7 @@ public class PrimeCheckerSequential {
      * @param numbers array of numbers
      * @return result of checking
      */
-    public static boolean containsNonPrime(int [] numbers)
-    {
+    public static boolean containsNonPrime(int [] numbers) {
         for (int number : numbers) {
             if (!isPrime(number)) {
                 return true;
