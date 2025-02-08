@@ -29,7 +29,7 @@ public class PrimeCheckerParallelThread extends Thread {
     /**
      * checking that number is prime.
      *
-     * @param number
+     * @param number to be checked
      * @return true if its prime
      */
     public static boolean isPrime(int number) {

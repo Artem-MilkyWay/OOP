@@ -10,7 +10,7 @@ public class PrimeCheckerParallelStream {
     /**
      * checking if number is prime.
      *
-     * @param number
+     * @param number number for checking
      * @return true if prime
      */
     public static boolean isPrime(int number) {
