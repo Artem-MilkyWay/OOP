@@ -13,12 +13,25 @@ public class PrimeCheckerParallelThread extends Thread {
     private final int end;
     private boolean hasNonPrime;
 
+    /**
+     * constructor for each thread.
+     *
+     * @param numbers array of all numbers
+     * @param start index of chunk's start
+     * @param end index of chunk's end
+     */
     public PrimeCheckerParallelThread(int[] numbers, int start, int end) {
         this.numbers = numbers;
         this.start = start;
         this.end = end;
     }
 
+    /**
+     * checking that number is prime.
+     *
+     * @param number
+     * @return true if its prime
+     */
     public static boolean isPrime(int number) {
         if (number <= 1) return false;
         for (int i = 2; i <= Math.sqrt(number); i++) {

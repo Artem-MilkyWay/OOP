@@ -6,6 +6,9 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Arrays;
 
+/**
+ * Тесты для всех трёх реализаций.
+ */
 public class PrimeCheckerTest {
 
     private final int [] nonPrimes1 = {1};
@@ -23,9 +26,11 @@ public class PrimeCheckerTest {
         long endTime = System.currentTimeMillis();
         System.out.println("Sequential execution time: " + (endTime - startTime) + " ms");
         assertFalse(result1); // on full of primes array
-        assertTrue(PrimeCheckerSequential.containsNonPrime(nonPrimes1)); // on arrays containing ...
-        assertTrue(PrimeCheckerSequential.containsNonPrime(nonPrimes2)); // non-primes numbers
-        assertFalse(PrimeCheckerSequential.containsNonPrime(emptyArray)); // on empty array
+        // on arrays containing non-primes numbers
+        assertTrue(PrimeCheckerSequential.containsNonPrime(nonPrimes1));
+        assertTrue(PrimeCheckerSequential.containsNonPrime(nonPrimes2));
+        // on empty array
+        assertFalse(PrimeCheckerSequential.containsNonPrime(emptyArray));
 
     }
 
@@ -42,11 +47,14 @@ public class PrimeCheckerTest {
             try {
                 boolean result2 = PrimeCheckerParallelThread.containsNonPrime(largePrimeArray, numThreads);
                 long endTime = System.currentTimeMillis();
-                System.out.println("Parallel execution with " + numThreads + " threads time: " + (endTime - startTime) + " ms");
+                System.out.println("Parallel execution with "
+                        + numThreads + " " + "threads time: " + (endTime - startTime) + " ms");
                 assertFalse(result2);
-                assertTrue(PrimeCheckerParallelThread.containsNonPrime(nonPrimes1,numThreads)); // on arrays containing ...
-                assertTrue(PrimeCheckerParallelThread.containsNonPrime(nonPrimes2, numThreads)); // non-primes numbers
-                assertFalse(PrimeCheckerParallelThread.containsNonPrime(emptyArray, numThreads)); // on empty array
+                // on arrays containing non-primes numbers
+                assertTrue(PrimeCheckerParallelThread.containsNonPrime(nonPrimes1,numThreads));
+                assertTrue(PrimeCheckerParallelThread.containsNonPrime(nonPrimes2, numThreads));
+                // on empty array
+                assertFalse(PrimeCheckerParallelThread.containsNonPrime(emptyArray, numThreads));
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -62,11 +70,14 @@ public class PrimeCheckerTest {
         long startTime = System.currentTimeMillis();
         boolean result3 = PrimeCheckerParallelStream.containsNonPrime(largePrimeArray);
         long endTime = System.currentTimeMillis();
-        System.out.println("Parallel execution with parallelStream time: " + (endTime - startTime) + " ms");
+        System.out.println("Parallel execution with parallelStream time: "
+                + (endTime - startTime) + " ms");
         assertFalse(result3);
-        assertTrue(PrimeCheckerParallelStream.containsNonPrime(nonPrimes1)); // on arrays containing ...
-        assertTrue(PrimeCheckerParallelStream.containsNonPrime(nonPrimes2)); // non-primes numbers
-        assertFalse(PrimeCheckerParallelStream.containsNonPrime(emptyArray)); // on empty array
+        // on arrays containing non-primes numbers
+        assertTrue(PrimeCheckerParallelStream.containsNonPrime(nonPrimes1));
+        assertTrue(PrimeCheckerParallelStream.containsNonPrime(nonPrimes2));
+        // on empty array
+        assertFalse(PrimeCheckerParallelStream.containsNonPrime(emptyArray));
     }
 
     /**

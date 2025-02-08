@@ -15,6 +15,12 @@ public class PrimeCheckerParallelStream {
         return true;
     }
 
+    /**
+     * checking for the existence of non-prime numbers.
+     *
+     * @param numbers array of numbers
+     * @return true if non-prime number will be found
+     */
     public static boolean containsNonPrime(int[] numbers) {
         return Arrays.stream(numbers)
                 .parallel()  // // connecting a parallel stream
