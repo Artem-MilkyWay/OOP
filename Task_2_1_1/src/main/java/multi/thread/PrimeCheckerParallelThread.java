@@ -33,9 +33,13 @@ public class PrimeCheckerParallelThread extends Thread {
      * @return true if its prime
      */
     public static boolean isPrime(int number) {
-        if (number <= 1) return false;
+        if (number <= 1) {
+            return false;
+        }
         for (int i = 2; i <= Math.sqrt(number); i++) {
-            if (number % i == 0) return false;
+            if (number % i == 0) {
+                return false;
+            }
         }
         return true;
     }
@@ -79,7 +83,9 @@ public class PrimeCheckerParallelThread extends Thread {
         // checking that all threads dont have non-prime numbers
         for (PrimeCheckerParallelThread thread : threads){
             thread.join();
-            if (thread.hasNonPrime) return true;
+            if (thread.hasNonPrime) {
+                return true;
+            }
         }
 
         return false;

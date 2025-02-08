@@ -51,7 +51,7 @@ public class PrimeCheckerTest {
                         + numThreads + " " + "threads time: " + (endTime - startTime) + " ms");
                 assertFalse(result2);
                 // on arrays containing non-primes numbers
-                assertTrue(PrimeCheckerParallelThread.containsNonPrime(nonPrimes1,numThreads));
+                assertTrue(PrimeCheckerParallelThread.containsNonPrime(nonPrimes1, numThreads));
                 assertTrue(PrimeCheckerParallelThread.containsNonPrime(nonPrimes2, numThreads));
                 // on empty array
                 assertFalse(PrimeCheckerParallelThread.containsNonPrime(emptyArray, numThreads));
