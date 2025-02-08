@@ -2,9 +2,9 @@ import multi.thread.PrimeCheckerParallelStream;
 import multi.thread.PrimeCheckerParallelThread;
 import multi.thread.PrimeCheckerSequential;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.Arrays;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * Тесты для всех трёх реализаций.

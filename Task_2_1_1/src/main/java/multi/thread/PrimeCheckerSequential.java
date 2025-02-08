@@ -1,7 +1,5 @@
 package multi.thread;
 
-import java.util.Arrays;
-
 /**
  * sequential checking for prime numbers.
  */
