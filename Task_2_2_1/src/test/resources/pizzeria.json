@@ -1,0 +1,38 @@
+{
+  "warehouseCapacity": 5,
+  "bakers": [
+    {
+      "id": 1,
+      "speedOfCooking": 2
+    },
+    {
+      "id": 2,
+      "speedOfCooking": 4
+    },
+    {
+      "id": 3,
+      "speedOfCooking": 5
+    },{
+      "id": 4,
+      "speedOfCooking": 3
+    }
+  ],
+  "couriers": [
+    {
+      "id": 1,
+      "bagSize": 1
+    },
+    {
+      "id": 2,
+      "bagSize": 3
+    },
+    {
+      "id": 3,
+      "bagSize": 1
+    },
+    {
+      "id": 4,
+      "bagSize": 1
+    }
+  ]
+}
