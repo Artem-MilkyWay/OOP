@@ -17,7 +17,8 @@ public class OrderHandler {
     private final List<Thread> courierThreads = new ArrayList<>();
 
     /**
-     * The constructor that match elements from json to lists and extract a capacity of the Warehouse.
+     * The constructor that match elements from
+       json to lists and extract a capacity of the Warehouse.
      *
      * @param configFilePath path to the json file.
      */

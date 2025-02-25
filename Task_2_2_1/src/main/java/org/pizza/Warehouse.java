@@ -1,5 +1,4 @@
 package org.pizza;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -65,16 +64,14 @@ public class Warehouse {
      * @param amount - bag capacity
      * @return all orders that could be taken by courier
      */
-    public static synchronized List<Integer> getFromWarehouse(int amount)
-    {
+    public static synchronized List<Integer> getFromWarehouse(int amount) {
         List<Integer> bag = new ArrayList<>();
 
         for (int i = 0; i < amount; i++) {
             if (!Warehouse.isEmpty()) {
                 bag.add(warehouse.poll());
                 Warehouse.currentAmount--;
-            }
-            else {
+            } else {
                 break;
             }
         }

@@ -1,10 +1,9 @@
 package org.pizza;
-
 import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * Orders Queue
+ * Orders Queue.
  */
 public class OrderList {
     private final static Queue<Integer> orderList = new LinkedList<>();
@@ -23,7 +22,7 @@ public class OrderList {
     }
 
     public static void printRemainingOrders() {
-        System.out.println("Unprocessed orders that remained in the queue: " + orderList );
+        System.out.println("Unprocessed orders that remained in the queue: " + orderList);
     }
 
     /**
@@ -31,7 +30,7 @@ public class OrderList {
      *
      * @return true if queue is empty
      */
-    public static boolean OrderListIsEmpty() {
+    public static boolean orderListIsEmpty() {
         return orderList.isEmpty();
     }
 

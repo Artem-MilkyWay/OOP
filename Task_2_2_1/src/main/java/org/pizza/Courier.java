@@ -1,12 +1,11 @@
 package org.pizza;
-
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Implementation of a single courier actions.
  */
-public class Courier implements Runnable{
+public class Courier implements Runnable {
     private final int bagSize;
     private final int id;
     private List<Integer> bag = new ArrayList<>();
@@ -54,13 +53,15 @@ public class Courier implements Runnable{
      */
     public void deliver() {
         for (int order : bag) {
-            System.out.println("[Order: " + order + "]" + " [delivering] ," + " by Courier with id " + id + " , Time: " + System.currentTimeMillis());
+            System.out.println("[Order: " + order + "]" + " [delivering] ,"
+                    + " by Courier with id " + id + " , Time: " + System.currentTimeMillis());
             try {
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
                 System.out.println("Error with thread waiting " + e.getMessage());
             }
-            System.out.println("[Order: " + order + "]" + " [delivered to customer] ," + " by Courier with id " + id + " , Time: " + System.currentTimeMillis());
+            System.out.println("[Order: " + order + "]" + " [delivered to customer] ,"
+                    + " by Courier with id " + id + " , Time: " + System.currentTimeMillis());
         }
     }
 }
