@@ -7,7 +7,7 @@ import java.util.Queue;
  * Orders Queue.
  */
 public class OrderList {
-    private final static Queue<Integer> orderList = new LinkedList<>();
+    private static final Queue<Integer> orderList = new LinkedList<>();
 
     /**
      * to add order to the queue.
