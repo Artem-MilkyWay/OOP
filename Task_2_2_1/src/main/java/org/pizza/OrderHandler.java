@@ -2,7 +2,6 @@ package org.pizza;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -36,7 +35,7 @@ public class OrderHandler {
                 JsonNode bakerNode = bakerIterator.next();
                 int id = bakerNode.get("id").asInt();
                 int speedOfCooking = bakerNode.get("speedOfCooking").asInt();
-                bakerThreads.add(new Thread(new Baker (speedOfCooking, id)));
+                bakerThreads.add(new Thread(new Baker(speedOfCooking, id)));
             }
 
             // Courier parsing
