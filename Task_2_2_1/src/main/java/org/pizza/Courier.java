@@ -41,7 +41,7 @@ public class Courier implements Runnable{
                 try {
                     Warehouse.class.wait(2000);
                 } catch (InterruptedException e) {
-                    throw new RuntimeException();
+                    System.out.println("Error with thread waiting " + e.getMessage());
                 }
             }
         }
@@ -58,7 +58,7 @@ public class Courier implements Runnable{
             try {
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+                System.out.println("Error with thread waiting " + e.getMessage());
             }
             System.out.println("[Order: " + order + "]" + " [delivered to customer] ," + " by Courier with id " + id + " , Time: " + System.currentTimeMillis());
         }

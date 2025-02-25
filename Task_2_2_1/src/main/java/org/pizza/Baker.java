@@ -49,7 +49,7 @@ public class Baker implements Runnable{
                 giveToWarehouse();
             }
         } catch (InterruptedException e) {
-            throw new RuntimeException();
+            System.out.println("Error with thread waiting " + e.getMessage());
         }
     }
 
@@ -65,7 +65,7 @@ public class Baker implements Runnable{
                 try {
                     Warehouse.class.wait(2000);
                 } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
+                    System.out.println("Error with thread waiting " + e.getMessage());
                 }
             }
 

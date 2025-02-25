@@ -45,7 +45,7 @@ public class OrderHandler {
             }
         } catch (IOException e) {
             e.printStackTrace();
-            throw new RuntimeException("Error with reading a configuration file.");
+            System.out.println("Error with thread waiting " + e.getMessage());
         }
     }
 
@@ -88,7 +88,7 @@ public class OrderHandler {
                 courier.join();
             }
         } catch (InterruptedException e) {
-            throw new RuntimeException("Error with threads finishing process" + e.getMessage());
+            System.out.println("Error with thread waiting " + e.getMessage());
         }
 
         Warehouse.printRemainingOrders();
