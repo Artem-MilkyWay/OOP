@@ -1,7 +1,7 @@
-import org.junit.jupiter.api.Test;
 import java.nio.file.Paths;
-import org.pizza.OrderHandler;
+import org.junit.jupiter.api.Test;
 import java.net.URL;
+import org.pizza.OrderHandler;
 
 /**
  * Testing the entire system.
