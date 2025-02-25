@@ -35,10 +35,8 @@ public class Baker implements Runnable{
                     if (Warehouse.isClosed()) {
                         return;
                     }
-                    System.out.println("Baker with id " + id + " is Waiting for the next order , Time: " + System.currentTimeMillis());
-                    OrderList.class.wait(1000);
+                    OrderList.class.wait(2000);
                 }
-
                 currentOrderId = OrderList.getLastOrder();
             }
 
@@ -60,9 +58,12 @@ public class Baker implements Runnable{
      */
     private void giveToWarehouse() {
         synchronized (Warehouse.class) {
-            if (!Warehouse.hasPlace()) {
+            while (!Warehouse.hasPlace()) {
+                if (Warehouse.isClosed()) {
+                    return;
+                }
                 try {
-                    Warehouse.class.wait();
+                    Warehouse.class.wait(2000);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }

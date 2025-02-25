@@ -22,6 +22,10 @@ public class OrderList {
         }
     }
 
+    public static void printRemainingOrders() {
+        System.out.println("Unprocessed orders that remained in the queue: " + orderList );
+    }
+
     /**
      * Checking for orders existence.
      *

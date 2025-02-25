@@ -26,7 +26,7 @@ public class OrderHandler {
             // Инициализация склада
             Warehouse.initializeWarehouse(configNode.get("warehouseCapacity").asInt());
 
-            // Парсим пекарей
+            // Baker parsing
             Iterator<JsonNode> bakerIterator = configNode.get("bakers").elements();
             while (bakerIterator.hasNext()) {
                 JsonNode bakerNode = bakerIterator.next();
@@ -35,7 +35,7 @@ public class OrderHandler {
                 bakerThreads.add(new Thread(new Baker (speedOfCooking, id)));
             }
 
-            // Парсим курьеров
+            // Courier parsing
             Iterator<JsonNode> courierIterator = configNode.get("couriers").elements();
             while (courierIterator.hasNext()) {
                 JsonNode courierNode = courierIterator.next();
@@ -90,5 +90,8 @@ public class OrderHandler {
         } catch (InterruptedException e) {
             throw new RuntimeException("Error with threads finishing process" + e.getMessage());
         }
+
+        Warehouse.printRemainingOrders();
+        OrderList.printRemainingOrders();
     }
 }

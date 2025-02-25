@@ -28,6 +28,10 @@ public class Warehouse {
         Warehouse.capacity = capacity;
     }
 
+    public static void printRemainingOrders() {
+        System.out.println("Orders that remained in the Warehouse: " + warehouse);
+    }
+
     public static boolean hasPlace() {
         return currentAmount < capacity;
     }

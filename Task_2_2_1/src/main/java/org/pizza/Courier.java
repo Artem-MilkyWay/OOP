@@ -22,17 +22,16 @@ public class Courier implements Runnable{
     @Override
     public void run() {
         while (!Warehouse.isClosed()) {
-            takeFromWarehouse();
-            System.out.println("Courier with id " + id + " has finished the working day");
+            takeNewOrder();
         }
-        System.out.println("Baker with id " + id + " has finished the working day");
+        System.out.println("Courier with id " + id + " has finished the working day");
     }
 
     /**
      * To take some orders from Orders Queue.
      * If Queue is empty then waiting for notification from Warehouse.
      */
-    public void takeFromWarehouse() {
+    public void takeNewOrder() {
         synchronized (Warehouse.class) {
             while (Warehouse.isEmpty()) {
                 if (Warehouse.isClosed()) {
@@ -40,16 +39,14 @@ public class Courier implements Runnable{
                 }
 
                 try {
-                    System.out.println("courier " + id + " is Waiting for the new delivering , Time: " + System.currentTimeMillis());
-                    Warehouse.class.wait(1000); // Ожидание, если склад пуст
+                    Warehouse.class.wait(2000);
                 } catch (InterruptedException e) {
-                    Thread.currentThread().interrupt(); // Установим флаг прерывания
-                    return;
+                    throw new RuntimeException();
                 }
             }
-
-            bag = Warehouse.getFromWarehouse(bagSize);
         }
+        bag = Warehouse.getFromWarehouse(bagSize);
+        deliver(); // to deliver all orders from bag
     }
 
     /**
