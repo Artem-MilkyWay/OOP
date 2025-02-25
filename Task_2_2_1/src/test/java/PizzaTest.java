@@ -34,7 +34,7 @@ public class PizzaTest {
             try {
                 Thread.sleep(11000);
             } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
 
             //To close pizzeria
