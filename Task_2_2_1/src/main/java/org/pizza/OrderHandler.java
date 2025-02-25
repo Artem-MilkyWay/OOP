@@ -45,14 +45,14 @@ public class OrderHandler {
             }
         } catch (IOException e) {
             e.printStackTrace();
-            throw new RuntimeException("Ошибка при чтении конфигурационного файла.");
+            throw new RuntimeException("Error with reading a configuration file.");
         }
     }
 
     /**
      * To make all Bakers and Couriers run.
      */
-    public void start() {
+    public void startProcess() {
         for (Thread baker : bakerThreads) {
             baker.start();
         }
@@ -76,13 +76,19 @@ public class OrderHandler {
      *
      * @throws InterruptedException error with thread finishing
      */
-    public void end() throws InterruptedException {
-        for (Thread baker : bakerThreads) {
-            baker.join();
-        }
+    public void end() {
+        Warehouse.close();
 
-        for (Thread courier : courierThreads) {
-            courier.join();
+        try {
+            for (Thread baker : bakerThreads) {
+                baker.join();
+            }
+
+            for (Thread courier : courierThreads) {
+                courier.join();
+            }
+        } catch (InterruptedException e) {
+            throw new RuntimeException("Error with threads finishing process" + e.getMessage());
         }
     }
 }

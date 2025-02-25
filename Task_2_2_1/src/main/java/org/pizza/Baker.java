@@ -18,9 +18,10 @@ public class Baker implements Runnable{
      */
     @Override
     public void run() {
-        while (true) {
+        while (!Warehouse.isClosed()) {
             bakerCook();
         }
+        System.out.println("Baker with id " + id + " has finished the working day");
     }
 
     /**
@@ -30,9 +31,12 @@ public class Baker implements Runnable{
         try {
             // waiting for new order coming
             synchronized (OrderList.class) {
-                if (OrderList.OrderListIsEmpty()) {
+                while (OrderList.OrderListIsEmpty()) {
+                    if (Warehouse.isClosed()) {
+                        return;
+                    }
                     System.out.println("Baker with id " + id + " is Waiting for the next order , Time: " + System.currentTimeMillis());
-                    OrderList.class.wait();
+                    OrderList.class.wait(1000);
                 }
 
                 currentOrderId = OrderList.getLastOrder();

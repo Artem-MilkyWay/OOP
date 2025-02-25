@@ -21,15 +21,20 @@ public class PizzaTest {
         if (resource != null) {
             String filePath = Paths.get(resource.getPath()).toString();
             OrderHandler handler = new OrderHandler(filePath);
-            handler.start();
-            for (int i = 0; i < 10; i++) {
+
+            handler.startProcess();
+
+            for (int i = 0; i < 6; i++) {
                 handler.processOrder(100 + i);
             }
+
             try {
-                handler.end();
+                Thread.sleep(11000);
             } catch (InterruptedException e) {
-                throw new RuntimeException("Error with thread finishing " + e);
+                throw new RuntimeException(e);
             }
+
+            handler.end();
         } else {
             System.out.println("Json file has not been found");
         }

@@ -13,6 +13,17 @@ public class Warehouse {
     private static int currentAmount = 0;
     private static final Queue<Integer> warehouse = new LinkedList<>();
 
+    private static boolean isClosed = false;
+
+    // Checking if warehouse is closed
+    public static boolean isClosed() {
+        return isClosed;
+    }
+
+    public static void close() {
+        isClosed = true;
+    }
+
     public static void initializeWarehouse(int capacity) {
         Warehouse.capacity = capacity;
     }

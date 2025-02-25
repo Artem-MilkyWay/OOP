@@ -21,10 +21,11 @@ public class Courier implements Runnable{
      */
     @Override
     public void run() {
-        while (true) {
+        while (!Warehouse.isClosed()) {
             takeFromWarehouse();
-            deliver();
+            System.out.println("Courier with id " + id + " has finished the working day");
         }
+        System.out.println("Baker with id " + id + " has finished the working day");
     }
 
     /**
@@ -34,9 +35,13 @@ public class Courier implements Runnable{
     public void takeFromWarehouse() {
         synchronized (Warehouse.class) {
             while (Warehouse.isEmpty()) {
+                if (Warehouse.isClosed()) {
+                    return;
+                }
+
                 try {
                     System.out.println("courier " + id + " is Waiting for the new delivering , Time: " + System.currentTimeMillis());
-                    Warehouse.class.wait(); // Ожидание, если склад пуст
+                    Warehouse.class.wait(1000); // Ожидание, если склад пуст
                 } catch (InterruptedException e) {
                     Thread.currentThread().interrupt(); // Установим флаг прерывания
                     return;
@@ -54,7 +59,7 @@ public class Courier implements Runnable{
         for (int order : bag) {
             System.out.println("[Order: " + order + "]" + " [delivering] ," + " by Courier with id " + id + " , Time: " + System.currentTimeMillis());
             try {
-                Thread.sleep(8000);
+                Thread.sleep(2000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
