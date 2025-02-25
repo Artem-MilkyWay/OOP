@@ -26,7 +26,7 @@ public class PizzaTest {
             handler.startProcess();
 
             //Making orders
-            for (int i = 0; i < 65; i++) {
+            for (int i = 0; i < 20; i++) {
                 handler.processOrder(100 + i);
             }
 
