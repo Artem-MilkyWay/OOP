@@ -38,7 +38,11 @@ public class PizzaTest {
             }
 
             //To close pizzeria
-            handler.end();
+            try {
+                handler.end();
+            } catch (InterruptedException e) {
+                System.out.println("Error with threads finishing " + e.getMessage());
+            }
         } else {
             System.out.println("Json file has not been found");
         }

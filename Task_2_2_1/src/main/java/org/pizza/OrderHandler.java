@@ -76,20 +76,17 @@ public class OrderHandler {
      *
      * @throws InterruptedException error with thread finishing
      */
-    public void end() {
+    public void end() throws InterruptedException {
         Warehouse.close();
 
-        try {
-            for (Thread baker : bakerThreads) {
-                baker.join();
-            }
-
-            for (Thread courier : courierThreads) {
-                courier.join();
-            }
-        } catch (InterruptedException e) {
-            System.out.println("Error with thread waiting " + e.getMessage());
+        for (Thread baker : bakerThreads) {
+            baker.join();
         }
+
+        for (Thread courier : courierThreads) {
+            courier.join();
+        }
+
 
         Warehouse.printRemainingOrders();
         OrderList.printRemainingOrders();
