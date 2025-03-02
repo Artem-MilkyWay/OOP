@@ -4,83 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f2a63d5-b1aa-430c-9e79-69a395119a84" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.gradle/8.12.1/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.gradle/8.12.1/checksums/md5-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.gradle/8.12.1/checksums/sha1-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.gradle/8.12.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.gradle/8.12.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.gradle/8.12.1/expanded/expanded.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.gradle/8.12.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.gradle/8.12.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.gradle/8.12.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.gradle/8.12.1/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.gradle/8.12.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.gradle/8.8/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.gradle/8.8/checksums/md5-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.gradle/8.8/checksums/sha1-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.gradle/8.8/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.gradle/8.8/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.gradle/8.8/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.gradle/8.8/expanded/expanded.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.gradle/8.8/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.gradle/8.8/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.gradle/8.8/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.gradle/8.8/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.gradle/8.8/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.gradle/file-system.probe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.idea/modules/Task_2_2_1.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/classes/java/main/org/pizza/Baker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/classes/java/main/org/pizza/Courier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/classes/java/main/org/pizza/OrderHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/classes/java/main/org/pizza/OrderList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/classes/java/main/org/pizza/Warehouse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/classes/java/test/PizzaTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/jacoco/test.exec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/libs/Task_2_2_1-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/reports/problems/problems-report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/reports/tests/test/classes/PizzaTest.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/reports/tests/test/css/base-style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/reports/tests/test/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/reports/tests/test/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/reports/tests/test/js/report.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/reports/tests/test/packages/default-package.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/resources/test/pizzeria.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/test-results/test/TEST-PizzaTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/test-results/test/binary/output.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/test-results/test/binary/output.bin.idx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/test-results/test/binary/results.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/tmp/.cache/expanded/zip_cde35f471dab581134460fc9a50e2c59/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/tmp/.cache/expanded/zip_cde35f471dab581134460fc9a50e2c59/META-INF/maven/org.jacoco/org.jacoco.agent/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/tmp/.cache/expanded/zip_cde35f471dab581134460fc9a50e2c59/META-INF/maven/org.jacoco/org.jacoco.agent/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/tmp/.cache/expanded/zip_cde35f471dab581134460fc9a50e2c59/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/tmp/.cache/expanded/zip_cde35f471dab581134460fc9a50e2c59/jacocoagent.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/tmp/.cache/expanded/zip_cde35f471dab581134460fc9a50e2c59/org/jacoco/agent/AgentJar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/tmp/.cache/expanded/zip_cde35f471dab581134460fc9a50e2c59/org/jacoco/agent/package-info.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/tmp/.cache/expanded/zip_ff7bf8f04f99dc306508d1c81e47a68b/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/tmp/.cache/expanded/zip_ff7bf8f04f99dc306508d1c81e47a68b/META-INF/maven/org.jacoco/org.jacoco.agent/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/tmp/.cache/expanded/zip_ff7bf8f04f99dc306508d1c81e47a68b/META-INF/maven/org.jacoco/org.jacoco.agent/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/tmp/.cache/expanded/zip_ff7bf8f04f99dc306508d1c81e47a68b/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/tmp/.cache/expanded/zip_ff7bf8f04f99dc306508d1c81e47a68b/jacocoagent.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/tmp/.cache/expanded/zip_ff7bf8f04f99dc306508d1c81e47a68b/org/jacoco/agent/AgentJar.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/tmp/.cache/expanded/zip_ff7bf8f04f99dc306508d1c81e47a68b/org/jacoco/agent/package-info.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/tmp/compileJava/compileTransaction/stash-dir/OrderHandler.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/tmp/compileTestJava/compileTransaction/stash-dir/PizzaTest.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Task_2_2_1/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
-    </list>
+    <list default="true" id="8f2a63d5-b1aa-430c-9e79-69a395119a84" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,7 +53,7 @@
     "JUnit.PrimeCheckerTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Task__2__1__1",
+    "git-widget-placeholder": "Task__2__2__1",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/miki/Desktop/OOP/Task_2_1_1",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
