@@ -1,3 +1,4 @@
+import multi.thread.IsPrimeChecker;
 import multi.thread.PrimeCheckerParallelStream;
 import multi.thread.PrimeCheckerParallelThread;
 import multi.thread.PrimeCheckerSequential;
@@ -92,7 +93,7 @@ public class PrimeCheckerTest {
         int count = 0;
         int number = 2;
         while (count < size) {
-            if (PrimeCheckerSequential.isPrime(number)) {
+            if (IsPrimeChecker.isPrime(number)) {
                 primes[count] = number;
                 count++;
             }
