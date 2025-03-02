@@ -1,0 +1,5 @@
+!Sequential execution time: 41 ms
+.Parallel execution with 2 threads time: 86 ms
+.Parallel execution with 4 threads time: 24 ms
+.Parallel execution with 8 threads time: 14 ms
+3Parallel execution with parallelStream time: 26 ms
