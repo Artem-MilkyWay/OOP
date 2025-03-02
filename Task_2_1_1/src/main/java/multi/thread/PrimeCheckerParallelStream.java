@@ -6,25 +6,6 @@ import java.util.Arrays;
  *  checking for prime numbers using a parallel stream.
  */
 public class PrimeCheckerParallelStream {
-
-    /**
-     * checking if number is prime.
-     *
-     * @param number number for checking
-     * @return true if prime
-     */
-    public static boolean isPrime(int number) {
-        if (number <= 1) {
-            return false;
-        }
-        for (int i = 2; i <= Math.sqrt(number); i++) {
-            if (number % i == 0) {
-                return false;
-            }
-        }
-        return true;
-    }
-
     /**
      * checking for the existence of non-prime numbers.
      *
@@ -34,6 +15,6 @@ public class PrimeCheckerParallelStream {
     public static boolean containsNonPrime(int[] numbers) {
         return Arrays.stream(numbers)
                 .parallel()  // // connecting a parallel stream
-                .anyMatch(number -> !isPrime(number));
+                .anyMatch(number -> !IsPrimeChecker.isPrime(number));
     }
 }

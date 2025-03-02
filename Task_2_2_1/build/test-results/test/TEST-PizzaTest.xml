@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="PizzaTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-02-26T08:09:31" hostname="Air-Artem.Dlink" time="12.206">
+  <properties/>
+  <testcase name="pizzaTest()" classname="PizzaTest" time="12.206"/>
+  <system-out><![CDATA[[Order: 100] [cooking] , by baker id 1 , Time: 1740557371744
+[Order: 102] [cooking] , by baker id 3 , Time: 1740557371744
+[Order: 101] [cooking] , by baker id 4 , Time: 1740557371744
+[Order: 103] [cooking] , by baker id 2 , Time: 1740557371744
+[Order: 100] [finished cooking] , by baker id 1 , Time: 1740557373749
+[Order: 100] [transferred to the warehouse] , by baker with id 1 , Time: 1740557373751
+[Order: 104] [cooking] , by baker id 1 , Time: 1740557373752
+[Order: 100] [delivering] , by Courier with id 1 , Time: 1740557373752
+[Order: 101] [finished cooking] , by baker id 4 , Time: 1740557374753
+[Order: 101] [transferred to the warehouse] , by baker with id 4 , Time: 1740557374754
+[Order: 105] [cooking] , by baker id 4 , Time: 1740557374754
+[Order: 101] [delivering] , by Courier with id 3 , Time: 1740557374754
+[Order: 103] [finished cooking] , by baker id 2 , Time: 1740557375753
+[Order: 103] [transferred to the warehouse] , by baker with id 2 , Time: 1740557375754
+[Order: 104] [finished cooking] , by baker id 1 , Time: 1740557375754
+[Order: 104] [transferred to the warehouse] , by baker with id 1 , Time: 1740557375754
+[Order: 100] [delivered to customer] , by Courier with id 1 , Time: 1740557375754
+[Order: 103] [delivering] , by Courier with id 2 , Time: 1740557375755
+[Order: 102] [finished cooking] , by baker id 3 , Time: 1740557376753
+[Order: 102] [transferred to the warehouse] , by baker with id 3 , Time: 1740557376754
+[Order: 102] [delivering] , by Courier with id 1 , Time: 1740557376754
+[Order: 101] [delivered to customer] , by Courier with id 3 , Time: 1740557376760
+[Order: 103] [delivered to customer] , by Courier with id 2 , Time: 1740557377757
+[Order: 104] [delivering] , by Courier with id 2 , Time: 1740557377758
+[Order: 105] [finished cooking] , by baker id 4 , Time: 1740557377758
+[Order: 105] [transferred to the warehouse] , by baker with id 4 , Time: 1740557377759
+[Order: 105] [delivering] , by Courier with id 4 , Time: 1740557377759
+[Order: 102] [delivered to customer] , by Courier with id 1 , Time: 1740557378756
+[Order: 104] [delivered to customer] , by Courier with id 2 , Time: 1740557379760
+[Order: 105] [delivered to customer] , by Courier with id 4 , Time: 1740557379764
+Courier with id 1 has finished the working day
+Baker with id 3 has finished the working day
+Courier with id 2 has finished the working day
+Baker with id 4 has finished the working day
+Courier with id 4 has finished the working day
+Baker with id 2 has finished the working day
+Baker with id 1 has finished the working day
+Courier with id 3 has finished the working day
+Orders that remained in the Warehouse: []
+Unprocessed orders that remained in the queue: []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

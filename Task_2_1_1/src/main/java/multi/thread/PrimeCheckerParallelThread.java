@@ -26,28 +26,10 @@ public class PrimeCheckerParallelThread extends Thread {
         this.end = end;
     }
 
-    /**
-     * checking that number is prime.
-     *
-     * @param number to be checked
-     * @return true if its prime
-     */
-    public static boolean isPrime(int number) {
-        if (number <= 1) {
-            return false;
-        }
-        for (int i = 2; i <= Math.sqrt(number); i++) {
-            if (number % i == 0) {
-                return false;
-            }
-        }
-        return true;
-    }
-
     @Override
     public void run() {
         for (int i = start; i < end; i++) {
-            if (!isPrime(numbers[i])) {
+            if (!IsPrimeChecker.isPrime(numbers[i])) {
                 hasNonPrime = true;
                 break;
             }

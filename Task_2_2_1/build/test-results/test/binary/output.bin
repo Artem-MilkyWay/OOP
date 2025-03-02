@@ -1,0 +1,40 @@
+=[Order: 100] [cooking] , by baker id 1 , Time: 1740557371744
+=[Order: 102] [cooking] , by baker id 3 , Time: 1740557371744
+=[Order: 101] [cooking] , by baker id 4 , Time: 1740557371744
+=[Order: 103] [cooking] , by baker id 2 , Time: 1740557371744
+F[Order: 100] [finished cooking] , by baker id 1 , Time: 1740557373749
+W[Order: 100] [transferred to the warehouse] , by baker with id 1 , Time: 1740557373751
+=[Order: 104] [cooking] , by baker id 1 , Time: 1740557373752
+G[Order: 100] [delivering] , by Courier with id 1 , Time: 1740557373752
+F[Order: 101] [finished cooking] , by baker id 4 , Time: 1740557374753
+W[Order: 101] [transferred to the warehouse] , by baker with id 4 , Time: 1740557374754
+=[Order: 105] [cooking] , by baker id 4 , Time: 1740557374754
+G[Order: 101] [delivering] , by Courier with id 3 , Time: 1740557374754
+F[Order: 103] [finished cooking] , by baker id 2 , Time: 1740557375753
+W[Order: 103] [transferred to the warehouse] , by baker with id 2 , Time: 1740557375754
+F[Order: 104] [finished cooking] , by baker id 1 , Time: 1740557375754
+W[Order: 104] [transferred to the warehouse] , by baker with id 1 , Time: 1740557375754
+R[Order: 100] [delivered to customer] , by Courier with id 1 , Time: 1740557375754
+G[Order: 103] [delivering] , by Courier with id 2 , Time: 1740557375755
+F[Order: 102] [finished cooking] , by baker id 3 , Time: 1740557376753
+W[Order: 102] [transferred to the warehouse] , by baker with id 3 , Time: 1740557376754
+G[Order: 102] [delivering] , by Courier with id 1 , Time: 1740557376754
+R[Order: 101] [delivered to customer] , by Courier with id 3 , Time: 1740557376760
+R[Order: 103] [delivered to customer] , by Courier with id 2 , Time: 1740557377757
+G[Order: 104] [delivering] , by Courier with id 2 , Time: 1740557377758
+F[Order: 105] [finished cooking] , by baker id 4 , Time: 1740557377758
+W[Order: 105] [transferred to the warehouse] , by baker with id 4 , Time: 1740557377759
+G[Order: 105] [delivering] , by Courier with id 4 , Time: 1740557377759
+R[Order: 102] [delivered to customer] , by Courier with id 1 , Time: 1740557378756
+R[Order: 104] [delivered to customer] , by Courier with id 2 , Time: 1740557379760
+R[Order: 105] [delivered to customer] , by Courier with id 4 , Time: 1740557379764
+/Courier with id 1 has finished the working day
+-Baker with id 3 has finished the working day
+/Courier with id 2 has finished the working day
+-Baker with id 4 has finished the working day
+/Courier with id 4 has finished the working day
+-Baker with id 2 has finished the working day
+-Baker with id 1 has finished the working day
+/Courier with id 3 has finished the working day
+*Orders that remained in the Warehouse: []
+2Unprocessed orders that remained in the queue: []
