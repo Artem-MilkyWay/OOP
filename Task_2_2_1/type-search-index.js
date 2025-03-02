@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"org.pizza","l":"Baker"},{"p":"org.pizza","l":"Courier"},{"p":"org.pizza","l":"OrderHandler"},{"p":"org.pizza","l":"OrderList"},{"p":"org.pizza","l":"Warehouse"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"org.pizza","l":"Baker"},{"p":"org.pizza","l":"Courier"},{"p":"org.pizza","l":"OrderHandler"},{"p":"org.pizza","l":"OrderList"},{"p":"org.pizza","l":"Parser"},{"p":"org.pizza","l":"Warehouse"}];updateSearchResults();
