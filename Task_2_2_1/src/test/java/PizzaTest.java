@@ -19,7 +19,7 @@ public class PizzaTest {
         // Checking if resource has been found
         if (resource != null) {
             String filePath = Paths.get(resource.getPath()).toString();
-            OrderHandler handler = new OrderHandler(filePath);
+            OrderHandler handler = OrderHandler.build(filePath);
 
             //To open pizzeria
             handler.startProcess();

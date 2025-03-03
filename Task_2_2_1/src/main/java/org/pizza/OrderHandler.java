@@ -10,20 +10,24 @@ import java.util.List;
  * Class implements handling of the entire process.
  */
 public class OrderHandler {
-    private List<Thread> bakerThreads = new ArrayList<>();
-    private List<Thread> courierThreads = new ArrayList<>();
+    private final List<Thread> bakerThreads;
+    private final List<Thread> courierThreads;
+
+    private OrderHandler(List<Thread> bakerThreads, List<Thread> courierThreads) {
+        this.bakerThreads = bakerThreads;
+        this.courierThreads = courierThreads;
+    }
 
     /**
      * The constructor that match elements from
-       json to lists and extract a capacity of the Warehouse.
+     json to lists and extract a capacity of the Warehouse.
      *
      * @param configFilePath path to the json file.
      */
-    public OrderHandler(String configFilePath) {
+    public static OrderHandler build(String configFilePath) {
         Parser parser = new Parser(configFilePath);
         parser.initializeWarehouse();
-        bakerThreads = parser.parseBakers();
-        courierThreads = parser.parseCouriers();
+        return new OrderHandler(parser.parseBakers(), parser.parseCouriers());
     }
 
     /**
