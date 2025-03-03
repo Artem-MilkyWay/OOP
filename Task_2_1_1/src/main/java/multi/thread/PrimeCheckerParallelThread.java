@@ -29,7 +29,7 @@ public class PrimeCheckerParallelThread extends Thread {
     @Override
     public void run() {
         for (int i = start; i < end; i++) {
-            if (!IsPrimeChecker.isPrime(numbers[i])) {
+            if (!PrimeChecker.isPrime(numbers[i])) {
                 hasNonPrime = true;
                 break;
             }

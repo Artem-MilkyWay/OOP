@@ -12,7 +12,7 @@ public class PrimeCheckerSequential {
      */
     public static boolean containsNonPrime(int [] numbers) {
         for (int number : numbers) {
-            if (!IsPrimeChecker.isPrime(number)) {
+            if (!PrimeChecker.isPrime(number)) {
                 return true;
             }
         }

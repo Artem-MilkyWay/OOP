@@ -3,18 +3,18 @@ package multi.thread;
 import java.util.Arrays;
 
 /**
- *  checking for prime numbers using a parallel stream.
+ *  check for prime numbers using a parallel stream.
  */
 public class PrimeCheckerParallelStream {
     /**
-     * checking for the existence of non-prime numbers.
+     * check that a least one non-prime number exists.
      *
      * @param numbers array of numbers
-     * @return true if non-prime number will be found
+     * @return true if non-prime number is found
      */
     public static boolean containsNonPrime(int[] numbers) {
         return Arrays.stream(numbers)
-                .parallel()  // // connecting a parallel stream
-                .anyMatch(number -> !IsPrimeChecker.isPrime(number));
+                .parallel()  // connecting a parallel stream
+                .anyMatch(number -> !PrimeChecker.isPrime(number));
     }
 }

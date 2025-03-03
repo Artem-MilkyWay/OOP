@@ -1,7 +1,7 @@
 package multi.thread;
 
 
-public class IsPrimeChecker {
+public class PrimeChecker {
     /**
      * checking if number is prime.
      *
