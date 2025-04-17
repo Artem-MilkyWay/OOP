@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="PrimeCheckerTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2025-02-24T12:46:33" hostname="Air-Artem.Dlink" time="0.406">
+  <properties/>
+  <testcase name="testSequentialExecution()" classname="PrimeCheckerTest" time="0.124"/>
+  <testcase name="testParallelExecution()" classname="PrimeCheckerTest" time="0.196"/>
+  <testcase name="testParallelStreamExecution()" classname="PrimeCheckerTest" time="0.085"/>
+  <system-out><![CDATA[Sequential execution time: 41 ms
+Parallel execution with 2 threads time: 86 ms
+Parallel execution with 4 threads time: 24 ms
+Parallel execution with 8 threads time: 14 ms
+Parallel execution with parallelStream time: 26 ms
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
