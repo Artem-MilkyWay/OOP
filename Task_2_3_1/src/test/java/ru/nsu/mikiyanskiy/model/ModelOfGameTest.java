@@ -83,7 +83,7 @@ public class ModelOfGameTest {
     public void testUpdateGameOverWhenHitsWall() {
         // Направим змею влево к краю
         Snake snake = model.getSnake();
-        snake.setDirection(AllDirections.LEFT);
+        snake.setCurrentDirection(AllDirections.LEFT);
 
         while (model.updateGameState()); // идёт до столкновения
 

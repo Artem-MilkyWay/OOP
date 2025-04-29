@@ -3,6 +3,7 @@ package ru.nsu.mikiyanskiy.model;
 import javafx.geometry.Point2D;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import ru.nsu.mikiyanskiy.data.SnakeData;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -13,7 +14,8 @@ public class SnakeTest {
     @BeforeEach
     public void setUp() {
         start = new Point2D(5, 5);
-        snake = new Snake(start);
+        SnakeData snakeData = new SnakeData(start);
+        snake = new Snake(snakeData);
     }
 
     @Test
@@ -25,13 +27,13 @@ public class SnakeTest {
 
     @Test
     public void testDirectionChangeValid() {
-        snake.setDirection(AllDirections.DOWN); // допустимая смена
+        snake.setCurrentDirection(AllDirections.DOWN); // допустимая смена
         assertEquals(AllDirections.DOWN, snake.getDirection());
     }
 
     @Test
     public void testDirectionChangeToOpposite() {
-        snake.setDirection(AllDirections.LEFT); // противоположное RIGHT
+        snake.setCurrentDirection(AllDirections.LEFT); // противоположное RIGHT
         assertEquals(AllDirections.RIGHT, snake.getDirection()); // не изменилось
     }
 
@@ -67,7 +69,7 @@ public class SnakeTest {
 
     @Test
     public void testGetNextHeadPositionAfterDirectionChange() {
-        snake.setDirection(AllDirections.UP);
+        snake.setCurrentDirection(AllDirections.UP);
         assertEquals(new Point2D(5, 4), snake.getNextHeadPosition());
     }
 }
