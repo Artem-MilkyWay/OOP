@@ -1,6 +1,8 @@
 package ru.nsu.mikiyanskiy.model;
 
 import javafx.geometry.Point2D;
+import ru.nsu.mikiyanskiy.data.SnakeData;
+
 import java.util.*;
 
 public class ModelOfGame {
@@ -15,7 +17,8 @@ public class ModelOfGame {
         this.numRows = numRows;
         this.numCols = numCols;
         this.targetLength = targetLength;
-        this.snake = new Snake(new Point2D(numCols / 2, numRows / 2));
+        SnakeData snakeData = new SnakeData(new Point2D(numCols / 2, numRows / 2));
+        this.snake = new Snake(snakeData);
         for (int i = 0; i < foodAmount; i++) {
             generateFood();
         }

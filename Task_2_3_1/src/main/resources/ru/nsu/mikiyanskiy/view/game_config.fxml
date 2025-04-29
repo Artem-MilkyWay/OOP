@@ -2,25 +2,39 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
 
-<VBox spacing="15" alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="ru.nsu.mikiyanskiy.controller.ConfigurationController">
+<StackPane xmlns:fx="http://javafx.com/fxml" fx:controller="ru.nsu.mikiyanskiy.controller.ConfigurationController"
+           style="-fx-background-color: linear-gradient(to bottom right, #74ebd5, #ACB6E5);">
 
-    <Label text="Настройки игры" style="-fx-font-size: 20px;" />
+    <VBox spacing="20" alignment="CENTER" maxWidth="400"
+          style="-fx-background-color: white; -fx-background-radius: 12; -fx-padding: 30;
+                 -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 5);
+                 -fx-font-family: 'Arial';">
 
-    <GridPane hgap="10" vgap="10">
-        <Label text="Строки:" GridPane.rowIndex="0" GridPane.columnIndex="6"/>
-        <TextField fx:id="rowsField" promptText="например 20" GridPane.rowIndex="0" GridPane.columnIndex="7"/>
+        <Label text="Game Settings" style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #333;" />
 
-        <Label text="Колонки:" GridPane.rowIndex="1" GridPane.columnIndex="6"/>
-        <TextField fx:id="colsField" promptText="например 20" GridPane.rowIndex="1" GridPane.columnIndex="7"/>
+        <GridPane hgap="15" vgap="20">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" percentWidth="40" />
+                <ColumnConstraints halignment="LEFT" percentWidth="60" />
+            </columnConstraints>
 
-        <Label text="Еды:" GridPane.rowIndex="2" GridPane.columnIndex="6"/>
-        <TextField fx:id="foodField" promptText="например 3" GridPane.rowIndex="2" GridPane.columnIndex="7"/>
+            <Label text="Rows:" style="-fx-font-size: 14px;" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="rowsField" promptText="e.g. 20" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
 
-        <Label text="Длина победы:" GridPane.rowIndex="3" GridPane.columnIndex="6"/>
-        <TextField fx:id="winLengthField" promptText="например 15" GridPane.rowIndex="3" GridPane.columnIndex="7"/>
-    </GridPane>
+            <Label text="Columns:" style="-fx-font-size: 14px;" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="colsField" promptText="e.g. 20" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
 
-    <Button text="Начать игру" onAction="#startGame"/>
-</VBox>
+            <Label text="Food items:" style="-fx-font-size: 14px;" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="foodField" promptText="e.g. 3" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+            <Label text="Winning length:" style="-fx-font-size: 14px;" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <TextField fx:id="winLengthField" promptText="e.g. 15" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        </GridPane>
+
+        <Button text="🚀 Start Game" onAction="#startGame"
+                style="-fx-background-color: #4CAF50; -fx-text-fill: white;
+                       -fx-font-size: 16px; -fx-background-radius: 8; -fx-padding: 10 20;"/>
+    </VBox>
+</StackPane>

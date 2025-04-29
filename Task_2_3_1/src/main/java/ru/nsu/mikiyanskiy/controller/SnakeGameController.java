@@ -31,10 +31,10 @@ public class SnakeGameController {
 
     private void handleKey(KeyEvent e) {
         switch (e.getCode()) {
-            case UP, W -> model.getSnake().setDirection(AllDirections.UP);
-            case DOWN, S -> model.getSnake().setDirection(AllDirections.DOWN);
-            case LEFT, A -> model.getSnake().setDirection(AllDirections.LEFT);
-            case RIGHT, D -> model.getSnake().setDirection(AllDirections.RIGHT);
+            case UP, W -> model.getSnake().setCurrentDirection(AllDirections.UP);
+            case DOWN, S -> model.getSnake().setCurrentDirection(AllDirections.DOWN);
+            case LEFT, A -> model.getSnake().setCurrentDirection(AllDirections.LEFT);
+            case RIGHT, D -> model.getSnake().setCurrentDirection(AllDirections.RIGHT);
         }
     }
 
