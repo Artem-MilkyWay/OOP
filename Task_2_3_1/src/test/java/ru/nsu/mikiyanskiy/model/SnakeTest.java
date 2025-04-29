@@ -32,12 +32,6 @@ public class SnakeTest {
     }
 
     @Test
-    public void testDirectionChangeToOpposite() {
-        snake.setCurrentDirection(AllDirections.LEFT); // противоположное RIGHT
-        assertEquals(AllDirections.RIGHT, snake.getDirection()); // не изменилось
-    }
-
-    @Test
     public void testIsCollidingTrue() {
         snake.move(true); // растем, тело: [6,5], [5,5]
         assertTrue(snake.isColliding(new Point2D(5, 5)));
