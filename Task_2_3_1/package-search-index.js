@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"ru.nsu.mikiyanskiy"},{"l":"ru.nsu.mikiyanskiy.controller"},{"l":"ru.nsu.mikiyanskiy.model"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"ru.nsu.mikiyanskiy"},{"l":"ru.nsu.mikiyanskiy.controller"},{"l":"ru.nsu.mikiyanskiy.data"},{"l":"ru.nsu.mikiyanskiy.model"}];updateSearchResults();
