@@ -12,6 +12,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         primaryStage = stage;
+        primaryStage.setTitle("Snake Game");
         showConfigScene();
     }
 
@@ -20,24 +21,32 @@ public class Main extends Application {
         Scene scene = new Scene(loader.load());
         SnakeGameController controller = loader.getController();
         controller.initGame(rows, cols, food, winLength);
+        
+        // Устанавливаем сцену
         primaryStage.setScene(scene);
-
-        int width = cols * 20 + 16;
-        int height = rows * 20 + 39 + 100;
-
-        primaryStage.setWidth(width);
-        primaryStage.setHeight(height);
+        
+        // Устанавливаем размер окна под игровое поле
+        int cellSize = 30; // Размер клетки
+        int padding = 40; // Отступы
+        primaryStage.setWidth(cols * cellSize + padding);
+        primaryStage.setHeight(rows * cellSize + padding + 50); // +50 для счетчика
+        
+        // Центрируем окно
+        primaryStage.centerOnScreen();
     }
 
     public static void showConfigScene() throws Exception {
         FXMLLoader loader = new FXMLLoader(Main.class.getResource("/ru/nsu/mikiyanskiy/view/game_config.fxml"));
         Scene scene = new Scene(loader.load());
-        primaryStage.setTitle("Настройка Змейки");
+        primaryStage.setTitle("Snake Game - Settings");
         primaryStage.setScene(scene);
 
-        primaryStage.setWidth(400);
-        primaryStage.setHeight(300);
-
+        // Устанавливаем размер окна настроек
+        primaryStage.setWidth(500);
+        primaryStage.setHeight(400);
+        // Центрируем окно
+        primaryStage.centerOnScreen();
+        
         primaryStage.show();
     }
 

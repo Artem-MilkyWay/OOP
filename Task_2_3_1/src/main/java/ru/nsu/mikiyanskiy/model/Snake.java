@@ -26,7 +26,6 @@ public class Snake {
         return data.getCurrentDirection();
     }
 
-
     public void move(boolean grow) {
         Point2D newHead = getNextHeadPosition();
         data.getBody().addFirst(newHead);
@@ -46,16 +45,14 @@ public class Snake {
                 (data.getCurrentDirection() == AllDirections.RIGHT && newDir == AllDirections.LEFT);
     }
 
-    public void setCurrentDirection(AllDirections currentDirection) {
-        data.setCurrentDirection(currentDirection);
-    }
-
-    public Snake(Point2D startPosition) {
-        data.getBody().add(startPosition);
+    public void setCurrentDirection(AllDirections newDirection) {
+        if (!isOpposite(newDirection)) {
+            data.setCurrentDirection(newDirection);
+        }
     }
 
     public Point2D getHead() {
-        return data.getBody().peekFirst();
+        return data.getHead();
     }
 
     public Deque<Point2D> getBody() {
