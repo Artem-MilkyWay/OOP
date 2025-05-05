@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml" fx:controller="ru.nsu.mikiyanskiy.controller.ConfigurationController"
+           style="-fx-background-color: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);">
+
+    <VBox spacing="25" alignment="CENTER" maxWidth="450"
+          style="-fx-background-color: rgba(255,255,255,0.95); -fx-background-radius: 25; -fx-padding: 40;
+                 -fx-effect: dropshadow(gaussian, rgba(67,198,172,0.3), 25, 0.3, 0, 10);
+                 -fx-font-family: 'Arial'; -fx-opacity: 0; -fx-translate-y: 40;"
+          fx:id="animatedVBox">
+
+        <Label text="⚙️ Game Settings" 
+               style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #222; 
+                      -fx-effect: dropshadow(gaussian, #43c6ac, 3, 0.3, 0, 2);" />
+
+        <GridPane hgap="20" vgap="25" style="-fx-padding: 0 20;">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" percentWidth="40" />
+                <ColumnConstraints halignment="LEFT" percentWidth="60" />
+            </columnConstraints>
+
+            <Label text="🟩 Rows:" 
+                   style="-fx-font-size: 18px; -fx-text-fill: #333; -fx-font-weight: bold;" 
+                   GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="rowsField" promptText="e.g. 20" 
+                      style="-fx-background-radius: 10; -fx-padding: 8 12; -fx-font-size: 16px;
+                             -fx-background-color: rgba(67,198,172,0.1); -fx-border-color: #43c6ac;
+                             -fx-border-radius: 10; -fx-border-width: 2;"
+                      GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="🟩 Columns:" 
+                   style="-fx-font-size: 18px; -fx-text-fill: #333; -fx-font-weight: bold;" 
+                   GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="colsField" promptText="e.g. 20" 
+                      style="-fx-background-radius: 10; -fx-padding: 8 12; -fx-font-size: 16px;
+                             -fx-background-color: rgba(67,198,172,0.1); -fx-border-color: #43c6ac;
+                             -fx-border-radius: 10; -fx-border-width: 2;"
+                      GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label text="🍏 Food items:" 
+                   style="-fx-font-size: 18px; -fx-text-fill: #333; -fx-font-weight: bold;" 
+                   GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="foodField" promptText="e.g. 3" 
+                      style="-fx-background-radius: 10; -fx-padding: 8 12; -fx-font-size: 16px;
+                             -fx-background-color: rgba(67,198,172,0.1); -fx-border-color: #43c6ac;
+                             -fx-border-radius: 10; -fx-border-width: 2;"
+                      GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+            <Label text="🏆 Winning length:" 
+                   style="-fx-font-size: 18px; -fx-text-fill: #333; -fx-font-weight: bold;" 
+                   GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <TextField fx:id="winLengthField" promptText="e.g. 15" 
+                      style="-fx-background-radius: 10; -fx-padding: 8 12; -fx-font-size: 16px;
+                             -fx-background-color: rgba(67,198,172,0.1); -fx-border-color: #43c6ac;
+                             -fx-border-radius: 10; -fx-border-width: 2;"
+                      GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        </GridPane>
+
+        <Button text="🚀 Start Game" onAction="#startGame"
+                style="-fx-background-color: linear-gradient(90deg, #43c6ac, #f8ffae); 
+                       -fx-text-fill: #222; -fx-font-size: 20px; -fx-font-weight: bold; 
+                       -fx-background-radius: 15; -fx-padding: 15 40;
+                       -fx-effect: dropshadow(gaussian, #43c6ac, 8, 0.3, 0, 3); 
+                       -fx-cursor: hand; -fx-transition: all 0.3s ease;"
+                fx:id="startButton"/>
+    </VBox>
+</StackPane>
