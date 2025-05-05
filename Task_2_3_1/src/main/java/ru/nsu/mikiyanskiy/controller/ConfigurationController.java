@@ -1,15 +1,16 @@
 package ru.nsu.mikiyanskiy.controller;
 
-import javafx.fxml.FXML;
-import javafx.scene.control.TextField;
-import ru.nsu.mikiyanskiy.Main;
-import javafx.fxml.Initializable;
-import javafx.scene.layout.VBox;
 import javafx.animation.FadeTransition;
 import javafx.animation.TranslateTransition;
-import javafx.util.Duration;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
+import javafx.util.Duration;
+import ru.nsu.mikiyanskiy.Main;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 

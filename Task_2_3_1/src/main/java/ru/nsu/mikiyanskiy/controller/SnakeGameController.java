@@ -1,33 +1,22 @@
 package ru.nsu.mikiyanskiy.controller;
 
-import javafx.animation.KeyFrame;
-import javafx.animation.Timeline;
+import javafx.animation.*;
 import javafx.fxml.FXML;
 import javafx.geometry.Point2D;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Label;
+import javafx.scene.effect.DropShadow;
+import javafx.scene.effect.Glow;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
-import ru.nsu.mikiyanskiy.model.*;
-import javafx.scene.control.Label;
+import ru.nsu.mikiyanskiy.model.AllDirections;
+import ru.nsu.mikiyanskiy.model.ModelOfGame;
+
 import java.util.ArrayList;
-import javafx.animation.FadeTransition;
-import javafx.animation.ScaleTransition;
-import javafx.animation.ParallelTransition;
-import javafx.animation.SequentialTransition;
-import javafx.animation.TranslateTransition;
-import javafx.scene.effect.Glow;
-import javafx.scene.effect.DropShadow;
-import javafx.scene.layout.AnchorPane;
-import javafx.stage.Screen;
-import java.net.URL;
-import java.util.ResourceBundle;
-import java.util.List;
-import java.util.Deque;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 
 public class SnakeGameController {
     @FXML

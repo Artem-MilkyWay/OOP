@@ -28,8 +28,8 @@ public class Main extends Application {
         // Устанавливаем размер окна под игровое поле
         int cellSize = 30; // Размер клетки
         int padding = 40; // Отступы
-        primaryStage.setWidth(cols * cellSize + padding);
-        primaryStage.setHeight(rows * cellSize + padding + 50); // +50 для счетчика
+        primaryStage.setWidth(cols * cellSize + padding + 300);
+        primaryStage.setHeight(rows * cellSize + padding + 420); // +50 для счетчика
         
         // Центрируем окно
         primaryStage.centerOnScreen();
@@ -42,8 +42,8 @@ public class Main extends Application {
         primaryStage.setScene(scene);
 
         // Устанавливаем размер окна настроек
-        primaryStage.setWidth(500);
-        primaryStage.setHeight(400);
+        primaryStage.setWidth(850);
+        primaryStage.setHeight(750);
         // Центрируем окно
         primaryStage.centerOnScreen();
         
