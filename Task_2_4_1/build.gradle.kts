@@ -30,16 +30,16 @@ dependencies {
 }
 
 tasks.test {
-    enabled = false
+    useJUnitPlatform()
+    finalizedBy(tasks.jacocoTestReport)
 }
 
-tasks {
-    "jacocoTestReport"(JacocoReport::class) {
-        reports {
-            xml.required.set(true)
-            html.required.set(true)
-            html.outputLocation.set(layout.buildDirectory.dir("$buildDir/jacoco/jacocoHtml"))
-        }
+tasks.jacocoTestReport {
+    dependsOn(tasks.test)
+    reports {
+        xml.required.set(true)
+        html.required.set(true)
+        html.outputLocation.set(layout.buildDirectory.dir("reports/jacoco/test/html"))
     }
 }
 
