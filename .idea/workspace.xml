@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2866d748-d2ee-491c-9c33-f20a7cc16b7e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Task_2_3_1/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Task_2_3_1/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Task_2_1_2/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Task_2_1_2/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,11 +26,26 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Task__2__3__1",
+    "git-widget-placeholder": "Task__2__1__2",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/miki/Desktop/OOP"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="OOP" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="OOP" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
