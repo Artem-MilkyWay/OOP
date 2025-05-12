@@ -1,0 +1,191 @@
+Initialized native services in: /Users/miki/.gradle/native
+Initialized jansi services in: /Users/miki/.gradle/native
+Received JVM installation metadata from '/Users/miki/.sdkman/candidates/java/21.0.2-librca': {JAVA_HOME=/Users/miki/.sdkman/candidates/java/21.0.2-librca, JAVA_VERSION=21.0.2, JAVA_VENDOR=BellSoft, RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=21.0.2+14-LTS, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=21.0.2+14-LTS, VM_VENDOR=BellSoft, OS_ARCH=aarch64}
+Found daemon DaemonInfo{pid=919, address=[58159aa5-9a68-4c06-8969-a046a2edba2a port:60038, addresses:[/127.0.0.1]], state=Idle, lastBusy=1747034661336, context=DefaultDaemonContext[uid=0c6822f6-d8fd-42ea-a9f8-dc8cc9c84cd0,javaHome=/Users/miki/Library/Java/JavaVirtualMachines/corretto-17.0.14/Contents/Home,javaVersion=17,daemonRegistryDir=/Users/miki/.gradle/daemon,pid=919,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=RU,-Duser.language=en,-Duser.variant]} however its context does not match the desired criteria.
+JVM is incompatible.
+Wanted: DaemonRequestContext{requestedJvm=21.0.2 (BellSoft 21.0.2+14-LTS), jvmCriteria=null, daemonOpts=[--add-opens=java.base/java.util=ALL-UNNAMED, --add-opens=java.base/java.lang=ALL-UNNAMED, --add-opens=java.base/java.lang.invoke=ALL-UNNAMED, --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED, --add-opens=java.base/java.nio.charset=ALL-UNNAMED, --add-opens=java.base/java.net=ALL-UNNAMED, --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED, -XX:MaxMetaspaceSize=384m, -XX:+HeapDumpOnOutOfMemoryError, -Xms256m, -Xmx512m, -Dfile.encoding=UTF-8, -Duser.country=RU, -Duser.language=en, -Duser.variant], applyInstrumentationAgent=true, nativeServicesMode=ENABLED, priority=NORMAL}
+Actual: DefaultDaemonContext[uid=0c6822f6-d8fd-42ea-a9f8-dc8cc9c84cd0,javaHome=/Users/miki/Library/Java/JavaVirtualMachines/corretto-17.0.14/Contents/Home,javaVersion=17,daemonRegistryDir=/Users/miki/.gradle/daemon,pid=919,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=--add-opens=java.base/java.util=ALL-UNNAMED,--add-opens=java.base/java.lang=ALL-UNNAMED,--add-opens=java.base/java.lang.invoke=ALL-UNNAMED,--add-opens=java.prefs/java.util.prefs=ALL-UNNAMED,--add-opens=java.base/java.nio.charset=ALL-UNNAMED,--add-opens=java.base/java.net=ALL-UNNAMED,--add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED,-XX:MaxMetaspaceSize=384m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=RU,-Duser.language=en,-Duser.variant]
+
+  Looking for a different daemon...
+The client will now receive all logging from the daemon (pid: 92189). The daemon log file: /Users/miki/.gradle/daemon/8.8/daemon-92189.out.log
+Starting 14th build in daemon [uptime: 1 hrs 5 mins 50.026 secs, performance: 100%, GC rate: 0.00/s, heap usage: 4% of 512 MiB, non-heap usage: 21% of 384 MiB]
+Using 8 worker leases.
+Now considering [/Users/miki/Desktop/Task_2_1_2, /Users/miki/Desktop/Yandex/Task_2_1_2] as hierarchies to watch
+Watching the file system is configured to be enabled if available
+File system watching is active
+Starting Build
+Settings evaluated using settings file '/Users/miki/Desktop/Task_2_1_2/settings.gradle'.
+Projects loaded. Root project using build file '/Users/miki/Desktop/Task_2_1_2/build.gradle'.
+Included projects: [root project 'Task_2_1_2']
+
+> Configure project :
+Evaluating root project 'Task_2_1_2' using build file '/Users/miki/Desktop/Task_2_1_2/build.gradle'.
+All projects evaluated.
+Task name matched 'test'
+Selected primary task 'test' from project :
+Tasks to be executed: [task ':compileJava', task ':processResources', task ':classes', task ':compileTestJava', task ':processTestResources', task ':testClasses', task ':test']
+Tasks that were excluded: []
+Resolve mutations for :compileJava (Thread[#678,Execution worker,5,main]) started.
+:compileJava (Thread[#678,Execution worker,5,main]) started.
+
+> Task :compileJava UP-TO-DATE
+Caching disabled for task ':compileJava' because:
+  Build cache is disabled
+Skipping task ':compileJava' as it is up-to-date.
+Resolve mutations for :processResources (Thread[#678,Execution worker,5,main]) started.
+:processResources (Thread[#678,Execution worker,5,main]) started.
+
+> Task :processResources NO-SOURCE
+Skipping task ':processResources' as it has no source files and no previous output files.
+Resolve mutations for :classes (Thread[#678,Execution worker,5,main]) started.
+:classes (Thread[#678,Execution worker,5,main]) started.
+
+> Task :classes UP-TO-DATE
+Skipping task ':classes' as it has no actions.
+Resolve mutations for :compileTestJava (Thread[#678,Execution worker,5,main]) started.
+:compileTestJava (Thread[#678,Execution worker,5,main]) started.
+
+> Task :compileTestJava UP-TO-DATE
+Caching disabled for task ':compileTestJava' because:
+  Build cache is disabled
+Skipping task ':compileTestJava' as it is up-to-date.
+Resolve mutations for :processTestResources (Thread[#678,Execution worker,5,main]) started.
+:processTestResources (Thread[#678,Execution worker,5,main]) started.
+
+> Task :processTestResources NO-SOURCE
+Skipping task ':processTestResources' as it has no source files and no previous output files.
+Resolve mutations for :testClasses (Thread[#678,Execution worker,5,main]) started.
+:testClasses (Thread[#678,Execution worker,5,main]) started.
+
+> Task :testClasses UP-TO-DATE
+Skipping task ':testClasses' as it has no actions.
+Resolve mutations for :test (Thread[#678,Execution worker,5,main]) started.
+:test (Thread[#678,Execution worker,5,main]) started.
+Gradle Test Executor 12 started executing tests.
+
+> Task :test
+Caching disabled for task ':test' because:
+  Build cache is disabled
+Task ':test' is not up-to-date because:
+  Task has failed previously.
+Starting process 'Gradle Test Executor 12'. Working directory: /Users/miki/Desktop/Task_2_1_2 Command: /Users/miki/.sdkman/candidates/java/21.0.2-librca/bin/java -Dorg.gradle.internal.worker.tmpdir=/Users/miki/Desktop/Task_2_1_2/build/tmp/test/work @/Users/miki/.gradle/.tmp/gradle-worker-classpath1984789875566210994txt -Xmx512m -Dfile.encoding=UTF-8 -Duser.country=RU -Duser.language=en -Duser.variant -ea worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 12'
+Successfully started process 'Gradle Test Executor 12'
+
+MasterTest > testAllWorkersAvailable() STANDARD_ERROR
+    Failed to connect to worker: localhost:8081
+    Failed to connect to worker: localhost:8082
+    Failed to connect to worker: localhost:8083
+    No available workers. Exiting.
+
+MasterTest > testAllWorkersAvailable() FAILED
+    org.opentest4j.AssertionFailedError: Should detect non-prime numbers ==> expected: <true> but was: <false>
+        at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+        at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+        at app//org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+        at app//org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+        at app//org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:210)
+        at app//org.example.MasterTest.testAllWorkersAvailable(MasterTest.java:57)
+
+MasterTest > testOneWorkerFails() STANDARD_ERROR
+    Failed to connect to worker: localhost:8081
+    Failed to connect to worker: localhost:8082
+    Failed to connect to worker: localhost:8083
+    No available workers. Exiting.
+
+MasterTest > testOneWorkerFails() FAILED
+    org.opentest4j.AssertionFailedError: Should work even if one worker is down ==> expected: <true> but was: <false>
+        at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+        at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+        at app//org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+        at app//org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+        at app//org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:210)
+        at app//org.example.MasterTest.testOneWorkerFails(MasterTest.java:80)
+
+MasterTest > testAllWorkersFail() STANDARD_ERROR
+    Failed to connect to worker: localhost:8081
+    Failed to connect to worker: localhost:8082
+    Failed to connect to worker: localhost:8083
+    No available workers. Exiting.
+
+MasterTest > testAllWorkersFail() FAILED
+    org.opentest4j.AssertionFailedError: Should report no workers ==> expected: <true> but was: <false>
+        at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+        at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+        at app//org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+        at app//org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+        at app//org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:210)
+        at app//org.example.MasterTest.testAllWorkersFail(MasterTest.java:95)
+
+MasterTest > testWorkerFailsDuringExecution() STANDARD_ERROR
+    Failed to connect to worker: localhost:8081
+    Failed to connect to worker: localhost:8082
+    Failed to connect to worker: localhost:8083
+    No available workers. Exiting.
+
+MasterTest > testSlowWorkerDoesNotBlock() STANDARD_ERROR
+    Failed to connect to worker: localhost:8081
+    Failed to connect to worker: localhost:8082
+    No available workers. Exiting.
+
+MasterTest > testSlowWorkerDoesNotBlock() FAILED
+    org.opentest4j.AssertionFailedError: Slow worker shouldn't block full computation ==> expected: <true> but was: <false>
+        at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+        at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+        at app//org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+        at app//org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+        at app//org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:210)
+        at app//org.example.MasterTest.testSlowWorkerDoesNotBlock(MasterTest.java:156)
+
+MasterTest > testLargeNumberSet() STANDARD_ERROR
+    Failed to connect to worker: localhost:8081
+    Failed to connect to worker: localhost:8082
+    Failed to connect to worker: localhost:8083
+    No available workers. Exiting.
+
+MasterTest > testLargeNumberSet() FAILED
+    org.opentest4j.AssertionFailedError: Should detect non-primes in large set ==> expected: <true> but was: <false>
+        at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+        at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+        at app//org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+        at app//org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+        at app//org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:210)
+        at app//org.example.MasterTest.testLargeNumberSet(MasterTest.java:130)
+
+MasterTest > testInvalidWorkerAddress() FAILED
+    java.lang.NumberFormatException: For input string: "address"
+        at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+        at java.base/java.lang.Integer.parseInt(Integer.java:662)
+        at java.base/java.lang.Integer.parseInt(Integer.java:778)
+        at org.example.Master.run(Master.java:24)
+        at org.example.Main.main(Main.java:18)
+        at org.example.MasterTest.runMasterWithArgs(MasterTest.java:42)
+        at org.example.MasterTest.testInvalidWorkerAddress(MasterTest.java:139)
+
+MasterTest > testAllNumbersPrime() STANDARD_ERROR
+    Failed to connect to worker: localhost:8081
+    Failed to connect to worker: localhost:8082
+    No available workers. Exiting.
+
+Gradle Test Executor 12 finished executing tests.
+
+> Task :test FAILED
+
+MasterTest > testAllNumbersPrime() FAILED
+    org.opentest4j.AssertionFailedError: All numbers are prime, should return false ==> expected: <true> but was: <false>
+        at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+        at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+        at app//org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+        at app//org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+        at app//org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:210)
+        at app//org.example.MasterTest.testAllNumbersPrime(MasterTest.java:67)
+Finished generating test XML results (0.005 secs) into: /Users/miki/Desktop/Task_2_1_2/build/test-results/test
+Generating HTML test report...
+Finished generating test html results (0.004 secs) into: /Users/miki/Desktop/Task_2_1_2/build/reports/tests/test
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.8/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+3 actionable tasks: 1 executed, 2 up-to-date
+Watched directory hierarchies: [/Users/miki/Desktop/Task_2_1_2, /Users/miki/Desktop/Yandex/Task_2_1_2]
