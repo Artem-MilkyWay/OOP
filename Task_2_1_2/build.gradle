@@ -17,7 +17,9 @@ dependencies {
 
 test {
     useJUnitPlatform()
+    dependsOn shadowJar
 }
+
 
 jar {
     manifest {

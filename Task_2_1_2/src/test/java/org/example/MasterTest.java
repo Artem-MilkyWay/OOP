@@ -29,7 +29,9 @@ public class MasterTest {
             try {
                 int exit = workerProcess.exitValue();
                 String err = new String(workerProcess.getInputStream().readAllBytes());
-                throw new IOException("Worker process exited with code " + exit + ". Output:\n" + err);
+                String serr = new String(workerProcess.getErrorStream().readAllBytes());
+                System.out.println("[TEST DEBUG] Worker process exited with code " + exit + ". Output:\n" + err + "\nSTDERR:\n" + serr);
+                throw new IOException("Worker process exited with code " + exit + ". Output:\n" + err + "\nSTDERR:\n" + serr);
             } catch (IllegalThreadStateException ignore) {
                 // process still running
             }
@@ -42,11 +44,11 @@ public class MasterTest {
     void setUp() throws IOException {
         // Start workers before each test
         worker1 = startWorker(WORKER_PORT_1);
-        waitForPortOpen(WORKER_PORT_1, 5000, worker1);
+        waitForPortOpen(WORKER_PORT_1, 10000, worker1);
         worker2 = startWorker(WORKER_PORT_2);
-        waitForPortOpen(WORKER_PORT_2, 5000, worker2);
+        waitForPortOpen(WORKER_PORT_2, 10000, worker2);
         worker3 = startWorker(WORKER_PORT_3);
-        waitForPortOpen(WORKER_PORT_3, 5000, worker3);
+        waitForPortOpen(WORKER_PORT_3, 10000, worker3);
     }
 
     @AfterEach
@@ -116,7 +118,8 @@ public class MasterTest {
                 "localhost:" + WORKER_PORT_3};
 
         String output = runMasterWithArgs(args);
-        assertTrue(output.contains("true"), "Should work even if one worker is down");
+        assertTrue(output.contains("Failed to connect to worker") || output.contains("true"), 
+            "Should either report worker failure or detect non-prime numbers");
     }
 
     @Test

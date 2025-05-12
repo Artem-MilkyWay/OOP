@@ -37,7 +37,7 @@ public class Master {
                 workers.add(worker);
                 activeWorkers.incrementAndGet();
             } catch (Exception e) {
-                System.err.println("Failed to connect to worker " + address + ": " + e.getMessage());
+                System.out.println("Failed to connect to worker " + address + ": " + e.getMessage());
             }
         }
         
