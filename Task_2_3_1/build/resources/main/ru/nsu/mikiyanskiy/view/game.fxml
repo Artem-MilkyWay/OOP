@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.URL?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="ru.nsu.mikiyanskiy.controller.SnakeGameController"
+      spacing="15" alignment="CENTER">
+    <stylesheets>
+        <URL value="@game.css" />
+    </stylesheets>
+    
+    <HBox alignment="CENTER">
+        <Label fx:id="scoreLabel" text="Score: 0" styleClass="score-label" />
+    </HBox>
+    
+    <AnchorPane fx:id="gameContainer" styleClass="game-container" VBox.vgrow="ALWAYS">
+        <Canvas fx:id="gameCanvas" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0" 
+                AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+    </AnchorPane>
+    
+    <StackPane>
+        <VBox fx:id="endOverlay" visible="false" styleClass="end-overlay" alignment="CENTER" spacing="20">
+            <Label fx:id="statusLabel" text="Game Over!" styleClass="game-over-label" />
+            <Label fx:id="finalScoreLabel" text="Final Score: 0" styleClass="final-score-label" />
+            <HBox spacing="20" alignment="CENTER">
+                <Button text="Play Again" onAction="#handlePlayAgain" styleClass="play-again-button" />
+                <Button text="Settings" onAction="#goToSettings" styleClass="play-again-button" />
+            </HBox>
+        </VBox>
+    </StackPane>
+</VBox>
